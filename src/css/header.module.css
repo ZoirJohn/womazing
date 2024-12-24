@@ -1,0 +1,32 @@
+.headerContainer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+.phoneNumber__logo {
+        color: var(--primary-color);
+}
+.nav ul {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+}
+.nav ul a {
+        text-decoration: none;
+        color: #000;
+}
+.phoneNumber {
+        display: flex;
+        align-items: center;
+}
+.phoneNumber span {
+        display: inline-block;
+        height: 100%;
+        padding: 0 4.7em 0 0;
+}
+.phoneNumber svg {
+        margin: 0 0.8em auto 0;
+}
