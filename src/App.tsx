@@ -10,12 +10,10 @@ function App() {
                         <BrowserRouter>
                                 <Header />
                                 <main>
-                                        <div className='container'>
-                                                <Routes>
-                                                        <Route path='/' element={<Home />} />
-                                                        <Route path='*' element={<NotFound />} />
-                                                </Routes>
-                                        </div>
+                                        <Routes>
+                                                <Route path='/' element={<Home />} />
+                                                <Route path='*' element={<NotFound />} />
+                                        </Routes>
                                 </main>
 
                                 <Footer />

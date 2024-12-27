@@ -7,7 +7,7 @@ import logo from '../photos/logo.svg'
 
 type TProps = {}
 const Header: FC<TProps> = (props) => {
-        const navLinks: string[] = ['/main', '/shop', '/about', '/contacts']
+        const navLinks: string[] = ['/', '/shop', '/about', '/contacts']
         const navItems: string[] = ['Главная', 'Магазин', 'О бренде', 'Контакты']
         const [burgerState, setBurgerState] = useState(false)
         return (
@@ -21,7 +21,7 @@ const Header: FC<TProps> = (props) => {
                                 <nav className={`${styles.nav} ${burgerState ? styles.active : ''}`}>
                                         <ul className={styles.nav__list}>
                                                 {navItems.map((i, id) => (
-                                                        <NavLink className={({ isActive }) => (isActive ? 'active' : undefined)} to={navLinks[id]} key={id}>
+                                                        <NavLink className={({ isActive }) => (isActive ? 'activeLink' : undefined)} to={navLinks[id]} key={id}>
                                                                 {navItems[id]}
                                                         </NavLink>
                                                 ))}

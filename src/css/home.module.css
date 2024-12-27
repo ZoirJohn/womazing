@@ -1,0 +1,90 @@
+.swiper {
+        width: 100%;
+        height: 100%;
+}
+
+.swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+.home::before {
+        content: '';
+        position: absolute;
+        width: 43%;
+        height: 100%;
+        background: var(--secondary-color);
+        right: 0;
+        top: 0;
+        z-index: -1;
+}
+.homeContainer {
+        display: flex;
+}
+.homeText {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3em 0;
+        padding: 10em 0;
+}
+.homeText h1 {
+        font-size: 3.5rem;
+        font-weight: 500;
+        width: 75%;
+}
+.homeText > p {
+        text-align: right;
+        font-size: 1.3333333rem;
+        width: 53%;
+}
+.homeText__button {
+        position: relative;
+        align-self: center;
+        background: var(--primary-color);
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Raleway';
+        padding: 1.5em 3.3em;
+}
+.homeText__button ::before {
+        content: url('../photos/arrow.svg');
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-100%, 0);
+        padding: 1.02em 1.8em;
+        background: #6e9c9f2a;
+}
+.homePhotos{
+        position: relative;
+        width: 460px;
+        border: 1px solid black;
+}
+.homePhotos img:not([id]){
+        width: 100%;
+}
+#womanTwo{
+        position: absolute;
+        right: 0;
+        transform: translate(50%,70%);
+}
+#womanOne{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translate(-70%,20%);
+}
