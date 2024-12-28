@@ -69,22 +69,37 @@
         padding: 1.02em 1.8em;
         background: #6e9c9f2a;
 }
-.homePhotos{
+.homePhotos {
         position: relative;
         width: 460px;
-        border: 1px solid black;
 }
-.homePhotos img:not([id]){
+.homePhotos img:not([id]) {
         width: 100%;
 }
-#womanTwo{
+#womanTwo {
         position: absolute;
         right: 0;
-        transform: translate(50%,70%);
+        transform: translate(50%, 70%);
 }
-#womanOne{
+#womanOne {
         position: absolute;
         left: 0;
-        bottom: 0;
-        transform: translate(-70%,20%);
+        bottom: 20px;
+        transform: translate(-70%, 20%);
+}
+
+@media (max-width: 992px) {
+        .homeText {
+                padding: 5em 0;
+        }
+}
+@media (max-width: 992px) {
+        .homeText h1{
+                line-height: 0.8em;
+        }
+}
+@media (max-width: 425px) {
+        .homeText {
+                padding: 2em 0;
+        }
 }

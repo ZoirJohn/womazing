@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import arrow from '../../photos/arrow.svg'
 import woman1 from '../../photos/woman1.png'
 import woman2 from '../../photos/woman2.png'
 import woman3 from '../../photos/woman3.png'
@@ -25,7 +24,7 @@ const Home: FC<TProps> = (props) => {
                                         pagination={{
                                                 clickable: true,
                                         }}
-                                        modules={[Keyboard, Pagination, Navigation]}
+                                        modules={[Keyboard, Pagination, Navigation]}className={styles.swiper}
                                 >
                                         <SwiperSlide>
                                                 <div className={styles.homeText}>
