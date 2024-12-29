@@ -14,7 +14,7 @@ const Header: FC<TProps> = (props) => {
                 <header className={styles.header}>
                         <div className={`container ${styles.headerContainer}`}>
                                 <div className={styles.logo}>
-                                        <Link to={'/ajdf'}>
+                                        <Link to={'/home'}>
                                                 <img src={logo} alt='logo' />
                                         </Link>
                                 </div>
@@ -31,13 +31,18 @@ const Header: FC<TProps> = (props) => {
                                         <p className={styles.phoneNumber}>
                                                 <span>
                                                         <FiPhoneCall className={styles.phoneNumber__logo} />
-                                                        <pre>+7 (495) 823-54-12</pre>
+                                                        <span className={styles.pre}>+7 (495) 823-54-12</span>
                                                 </span>
                                                 <Link to='/cart' className={styles.cartLink}>
                                                         <IoBagHandleOutline />
                                                 </Link>
                                         </p>
-                                        <a className={`${styles.burgerMenu} ${burgerState ? styles.active : ''}`} onClick={() => setBurgerState(!burgerState)}>
+                                        <a
+                                                className={`${styles.burgerMenu} ${burgerState ? styles.active : ''}`}
+                                                onClick={() => {
+                                                        setBurgerState(!burgerState)
+                                                }}
+                                        >
                                                 <span></span>
                                         </a>
                                 </div>

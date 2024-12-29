@@ -1,5 +1,5 @@
 .header {
-        position: sticky;
+        position: relative;
 }
 
 .headerContainer {
@@ -44,7 +44,11 @@
 .burgerMenu {
         display: none;
 }
-
+.burgerMenu,
+.info,
+.logo,.nav {
+        z-index: 3;
+}
 @media (max-width: 1024px) {
         .headerContainer {
                 padding-top: 25px;
@@ -56,7 +60,7 @@
 }
 @media (max-width: 768px) {
         .nav {
-                z-index: 1;
+                z-index: 2;
                 display: flex;
                 justify-content: center;
                 position: absolute;
@@ -119,13 +123,9 @@
         .phoneNumber .cartLink {
                 margin: 0 0.8em 0 0;
         }
-        .burgerMenu,
-        .info,
-        .logo {
-                z-index: 2;
-        }
+
         .header::before {
-                z-index: 2;
+                z-index: 3;
                 content: '';
                 position: absolute;
                 left: 0;
@@ -147,7 +147,7 @@
                 display: flex;
                 align-items: center;
         }
-        .phoneNumber pre {
+        .phoneNumber .pre {
                 display: none;
         }
         .phoneNumber__logo {

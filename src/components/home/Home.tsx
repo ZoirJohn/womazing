@@ -10,8 +10,12 @@ import woman3 from '../../photos/woman3.png'
 // import required modules
 import { Keyboard, Pagination, Navigation } from 'swiper/modules'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { getHomeHeader, getHomeParagraph } from '../../selector'
 type TProps = {}
 const Home: FC<TProps> = (props) => {
+        const homeHeader = useSelector(getHomeHeader)
+        const homeParagraph = useSelector(getHomeParagraph)
         return (
                 <section className={styles.home}>
                         <div className={`container ${styles.homeContainer}`}>
@@ -24,19 +28,21 @@ const Home: FC<TProps> = (props) => {
                                         pagination={{
                                                 clickable: true,
                                         }}
-                                        modules={[Keyboard, Pagination, Navigation]}className={styles.swiper}
+                                        modules={[Keyboard, Pagination, Navigation]}
+                                        style={{ zIndex: 0 }}
+                                        className={styles.swiper}
                                 >
                                         <SwiperSlide>
                                                 <div className={styles.homeText}>
-                                                        <h1>Новые поступления в этом сезоне</h1>
-                                                        <p>Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне. Время исследовать.</p>
+                                                        <h1>{homeHeader}</h1>
+                                                        <p>{homeParagraph}</p>
                                                         <Link to={'/shop'} className={styles.homeText__button}>
                                                                 <p>Открыть магазин</p>
                                                         </Link>
                                                 </div>
                                         </SwiperSlide>
-                                        <SwiperSlide>Slide 2</SwiperSlide>
-                                        <SwiperSlide>Slide 3</SwiperSlide>
+                                        <SwiperSlide>Hoya</SwiperSlide>
+                                        <SwiperSlide>Shiya</SwiperSlide>
                                 </Swiper>
                                 <div className={styles.homePhotos}>
                                         <img src={woman1} alt='woman' />

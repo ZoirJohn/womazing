@@ -1,6 +1,7 @@
 .swiper {
         width: 100%;
         height: 100%;
+        position: relative;
 }
 
 .swiper-slide {
@@ -18,15 +19,17 @@
         height: 100%;
         object-fit: cover;
 }
+.home {
+        position: relative;
+}
 .home::before {
         content: '';
         position: absolute;
         width: 43%;
-        height: 100%;
+        height: 120%;
         background: var(--secondary-color);
         right: 0;
-        top: 0;
-        z-index: -1;
+        top: -20%;
 }
 .homeContainer {
         display: flex;
@@ -94,7 +97,7 @@
         }
 }
 @media (max-width: 992px) {
-        .homeText h1{
+        .homeText h1 {
                 line-height: 0.8em;
         }
 }
