@@ -28,6 +28,7 @@ const Home: FC<TProps> = (props) => {
                                         pagination={{
                                                 clickable: true,
                                         }}
+                                        autoplay
                                         modules={[Keyboard, Pagination, Navigation]}
                                         style={{ zIndex: 0 }}
                                         className={styles.swiper}

@@ -25,7 +25,11 @@ main {
 :root {
         --primary-color: #6e9c9f;
         --secondary-color: #f1eadc;
-        --swiper-theme-color: #6e9c9f !important;
+        --swiper-pagination-color: #6e9c9f;
+        --swiper-pagination-bullet-size: 4px;
+        --swiper-pagination-bullet-width: 30px;
+        --swiper-pagination-bullet-inactive-color: #000;
+        --swiper-pagination-bullet-border-radius: 0;
 }
 .container {
         max-width: 1130px;

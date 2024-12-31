@@ -3,7 +3,9 @@
         height: 100%;
         position: relative;
 }
-
+.swiper-pagination-bullet {
+        border-radius: 0 ;
+}
 .swiper-slide {
         text-align: center;
         font-size: 18px;
@@ -95,10 +97,45 @@
         .homeText {
                 padding: 5em 0;
         }
-}
-@media (max-width: 992px) {
         .homeText h1 {
                 line-height: 0.8em;
+        }
+        #womanOne {
+                transform: none;
+                left: -10%;
+                top: 50%;
+                width: 40%;
+        }
+}
+@media (max-width: 768px) {
+        .swiper {
+                z-index: 1 !important;
+        }
+        .homePhotos {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                z-index: 0;
+        }
+        .home::before {
+                background: #f1eadcdb;
+                z-index: 1;
+                width: 100%;
+                top: 0;
+        }
+        .homePhotos img:not([id]) {
+                top: 0;
+        }
+        #womanTwo {
+                right: 0;
+                width: 33%;
+                transform: none;
+        }
+        #womanOne {
+                top: 22%;
+                left: 0;
+                width: 25%;
+                transform: none;
         }
 }
 @media (max-width: 425px) {
