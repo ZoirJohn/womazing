@@ -5,11 +5,14 @@ import { FiPhoneCall } from 'react-icons/fi'
 import { IoBagHandleOutline } from 'react-icons/io5'
 import logo from '../photos/logo.svg'
 
-type TProps = {}
+type TProps = {
+        setBurgerState: (b:boolean) => void
+        burgerState: boolean
+}
 const Header: FC<TProps> = (props) => {
         const navLinks: string[] = ['/', '/shop', '/about', '/contacts']
         const navItems: string[] = ['Главная', 'Магазин', 'О бренде', 'Контакты']
-        const [burgerState, setBurgerState] = useState(false)
+
         return (
                 <header className={styles.header}>
                         <div className={`container ${styles.headerContainer}`}>
@@ -18,7 +21,7 @@ const Header: FC<TProps> = (props) => {
                                                 <img src={logo} alt='logo' />
                                         </Link>
                                 </div>
-                                <nav className={`${styles.nav} ${burgerState ? styles.active : ''}`}>
+                                <nav className={`${styles.nav} ${props.burgerState ? styles.active : ''}`}>
                                         <ul className={styles.nav__list}>
                                                 {navItems.map((i, id) => (
                                                         <NavLink className={({ isActive }) => (isActive ? 'activeLink' : undefined)} to={navLinks[id]} key={id}>
@@ -38,9 +41,9 @@ const Header: FC<TProps> = (props) => {
                                                 </Link>
                                         </p>
                                         <a
-                                                className={`${styles.burgerMenu} ${burgerState ? styles.active : ''}`}
+                                                className={`${styles.burgerMenu} ${props.burgerState ? styles.active : ''}`}
                                                 onClick={() => {
-                                                        setBurgerState(!burgerState)
+                                                        props.setBurgerState(!props.burgerState)
                                                 }}
                                         >
                                                 <span></span>

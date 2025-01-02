@@ -7,12 +7,13 @@ import 'swiper/css/navigation'
 import woman1 from '../../photos/woman1.png'
 import woman2 from '../../photos/woman2.png'
 import woman3 from '../../photos/woman3.png'
-// import required modules
 import { Keyboard, Pagination, Navigation } from 'swiper/modules'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { getHomeHeader, getHomeParagraph } from '../../selector'
+
 type TProps = {}
+
 const Home: FC<TProps> = (props) => {
         const homeHeader = useSelector(getHomeHeader)
         const homeParagraph = useSelector(getHomeParagraph)

@@ -1,5 +1,7 @@
 .header {
-        position: relative;
+        position: sticky;
+        top: 0;
+        z-index: 2;
 }
 
 .headerContainer {
@@ -46,7 +48,8 @@
 }
 .burgerMenu,
 .info,
-.logo,.nav {
+.logo,
+.nav {
         z-index: 3;
 }
 @media (max-width: 1024px) {
@@ -77,6 +80,9 @@
         .nav ul {
                 flex-direction: column;
                 justify-content: center;
+        }
+        .nav ul a {
+                font-size: 1.5rem;
         }
         .info {
                 display: flex;

@@ -5,13 +5,21 @@ import Footer from './components/Footer'
 import Home from './components/home/Home'
 import { Provider } from 'react-redux'
 import store from './store'
-
+import { useEffect, useState } from 'react'
 function App() {
+        const [burgerState, setBurgerState] = useState(false)
+        const body = document.getElementsByTagName('body')
+        console.log(burgerState)
+        if (burgerState) {
+                body[0].className = 'active'
+        } else {
+                body[0].className = ''
+        }
         return (
                 <div id='root'>
                         <Provider store={store}>
                                 <BrowserRouter>
-                                        <Header />
+                                        <Header setBurgerState={setBurgerState} burgerState={burgerState} />
                                         <main>
                                                 <Routes>
                                                         <Route path='/' element={<Home />} />

@@ -4,7 +4,7 @@
         position: relative;
 }
 .swiper-pagination-bullet {
-        border-radius: 0 ;
+        border-radius: 0;
 }
 .swiper-slide {
         text-align: center;
@@ -63,7 +63,7 @@
         font-family: 'Raleway';
         padding: 1.5em 3.3em;
 }
-.homeText__button ::before {
+.homeText__button::before {
         content: url('../photos/arrow.svg');
         display: flex;
         align-items: center;
@@ -92,7 +92,11 @@
         bottom: 20px;
         transform: translate(-70%, 20%);
 }
-
+@media (max-width: 1300px) {
+        .home::before {
+                width: 53%;
+        }
+}
 @media (max-width: 992px) {
         .homeText {
                 padding: 5em 0;
@@ -141,5 +145,15 @@
 @media (max-width: 425px) {
         .homeText {
                 padding: 2em 0;
+        }
+        .homeText h1 {
+                font-size: 3rem;
+        }
+        .homeText > p {
+                width: 73%;
+                font-size: 1rem;
+        }
+        .homeText__button {
+                align-self: flex-end;
         }
 }
