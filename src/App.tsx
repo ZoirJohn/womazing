@@ -9,7 +9,6 @@ import { useEffect, useState } from 'react'
 function App() {
         const [burgerState, setBurgerState] = useState(false)
         const body = document.getElementsByTagName('body')
-        console.log(burgerState)
         if (burgerState) {
                 body[0].className = 'active'
         } else {

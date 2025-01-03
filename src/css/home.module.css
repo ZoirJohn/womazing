@@ -78,6 +78,11 @@
         position: relative;
         width: 460px;
 }
+@media (max-width: 1300px) {
+        .homePhotos {
+                overflow: hidden;
+        }
+}
 .homePhotos img:not([id]) {
         width: 100%;
 }
@@ -125,6 +130,7 @@
                 background: #f1eadcdb;
                 z-index: 1;
                 width: 100%;
+                height: 100%;
                 top: 0;
         }
         .homePhotos img:not([id]) {
@@ -140,6 +146,10 @@
                 left: 0;
                 width: 25%;
                 transform: none;
+        }
+        .home {
+                padding: 0 0 2em;
+                overflow: hidden;
         }
 }
 @media (max-width: 425px) {
