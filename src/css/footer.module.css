@@ -1,0 +1,101 @@
+.footer {
+        background: var(--secondary-color);
+        padding-top: 7em;
+        padding-bottom: 7em;
+}
+.footerContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+}
+.footerNav ul {
+        display: flex;
+        align-items: center;
+        gap: 0 45px;
+}
+.pre {
+        cursor: pointer;
+}
+.footerNavContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+}
+.footerNavContainer li {
+        list-style-type: none;
+        font-size: 13px;
+}
+.footer__shopNav ul,
+.footer__copyright {
+        display: flex;
+        flex-direction: column;
+        gap: 0.666em;
+}
+.email {
+        display: flex;
+        justify-content: end;
+}
+.footer__img a:not(:nth-child(1)) {
+        margin: 0 0 0 0.6em;
+}
+.footer__img svg {
+        font-size: 1.5rem;
+}
+.footer__paymentDetails {
+        display: flex;
+        justify-content: end;
+        padding: 2em 0 0;
+}
+@media (max-width: 768px) {
+        .footer {
+                padding-top: 3em;
+                padding-bottom: 3em;
+        }
+        .footerContainer {
+                align-items: start;
+                flex-direction: column;
+                gap: 2em;
+        }
+}
+@media (max-width: 425px) {
+        .footerContainer {
+                align-items: center;
+        }
+        .emailContainer {
+                display: flex;
+                justify-content: center;
+        }
+        .logo img {
+                width: 200px;
+        }
+        .footer {
+                padding-top: 2em;
+                padding-bottom: 2em;
+        }
+        .footerNav ul {
+                flex-direction: column;
+                gap: 1em 0;
+        }
+        .footerNav ul a {
+                font-size: 1.5rem;
+        }
+        .footerNavContainer {
+                padding-top: 3em;
+                flex-direction: column-reverse;
+                gap: 2em 0;
+        }
+        .footer__shopNav ul li {
+                font-size: 1.5rem;
+        }
+        .footer__shopNav,
+        .footer__img {
+                align-self: center;
+        }
+        .footer__shopNav ul {
+                align-items: center;
+        }
+        .footer__copyright {
+                align-self: flex-start;
+        }
+}

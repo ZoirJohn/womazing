@@ -4,9 +4,9 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import woman1 from '../../photos/woman1.png'
-import woman2 from '../../photos/woman2.png'
-import woman3 from '../../photos/woman3.png'
+import woman1 from '../../images/woman1.png'
+import woman2 from '../../images/woman2.png'
+import woman3 from '../../images/woman3.png'
 import { Keyboard, Pagination, Navigation } from 'swiper/modules'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
@@ -29,7 +29,6 @@ const Home: FC<TProps> = (props) => {
                                         pagination={{
                                                 clickable: true,
                                         }}
-                                        autoplay
                                         modules={[Keyboard, Pagination, Navigation]}
                                         style={{ zIndex: 0 }}
                                         className={styles.swiper}

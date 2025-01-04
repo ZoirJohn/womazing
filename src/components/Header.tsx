@@ -3,7 +3,7 @@ import styles from '../css/header.module.css'
 import { NavLink, Link } from 'react-router-dom'
 import { FiPhoneCall } from 'react-icons/fi'
 import { IoBagHandleOutline } from 'react-icons/io5'
-import logo from '../photos/logo.svg'
+import logo from '../images/logo.svg'
 
 type TProps = {
         setBurgerState: (b: boolean) => void

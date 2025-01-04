@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import NotFound from './components/404'
-import Footer from './components/Footer'
+import Footer from './components/footer/Footer'
 import Home from './components/home/Home'
 import { Provider } from 'react-redux'
 import store from './store'

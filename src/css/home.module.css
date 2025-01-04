@@ -23,6 +23,7 @@
 }
 .home {
         position: relative;
+        padding: 0 0 4em;
 }
 .home::before {
         content: '';
@@ -64,7 +65,7 @@
         padding: 1.5em 3.3em;
 }
 .homeText__button::before {
-        content: url('../photos/arrow.svg');
+        content: url('../images/arrow.svg');
         display: flex;
         align-items: center;
         position: absolute;
@@ -79,22 +80,23 @@
         width: 460px;
 }
 @media (max-width: 1300px) {
-        .homePhotos {
+        .home {
                 overflow: hidden;
         }
 }
 .homePhotos img:not([id]) {
-        width: 100%;
+        width: 120%;
 }
 #womanTwo {
         position: absolute;
         right: 0;
+        top: 0;
         transform: translate(50%, 70%);
 }
 #womanOne {
         position: absolute;
         left: 0;
-        bottom: 20px;
+        bottom: 0.2em;
         transform: translate(-70%, 20%);
 }
 @media (max-width: 1300px) {
@@ -148,7 +150,6 @@
                 transform: none;
         }
         .home {
-                padding: 0 0 2em;
                 overflow: hidden;
         }
 }
