@@ -18,6 +18,10 @@ body,
 html {
         height: 100%;
 }
+h1{
+        font-size: 40px;
+        font-weight: 500;
+}
 body.active {
         overflow: hidden;
 }
@@ -56,4 +60,10 @@ main {
 .activeLink {
         color: var(--primary-color) !important;
         font-weight: 700;
+}
+.mainMarginTop {
+        margin-top: 8.666em;
+}
+.mainMarginBottom {
+        margin-top: 8.666em;
 }
