@@ -53,10 +53,18 @@ const Footer: FC<TProps> = (props) => {
                                 </ul>
                                 <nav className={styles.footer__shopNav}>
                                         <ul>
-                                                <li>Пальто</li>
-                                                <li>Свитшоты</li>
-                                                <li>Кардиганы</li>
-                                                <li>Толстовки</li>
+                                                <li>
+                                                        <a href='#'>Пальто</a>
+                                                </li>
+                                                <li>
+                                                        <a href='#'>Свитшоты</a>
+                                                </li>
+                                                <li>
+                                                        <a href='#'>Кардиганы</a>
+                                                </li>
+                                                <li>
+                                                        <a href='#'>Толстовки</a>
+                                                </li>
                                         </ul>
                                 </nav>
                                 <div className={styles.footer__img}>

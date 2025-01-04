@@ -24,6 +24,8 @@
 }
 .footerNavContainer li {
         list-style-type: none;
+}
+.footerNavContainer li a,.footer__copyright li {
         font-size: 13px;
 }
 .footer__shopNav ul,
