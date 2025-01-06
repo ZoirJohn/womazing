@@ -82,3 +82,15 @@ main {
                 font-size: 2rem;
         }
 }
+@media (max-width: 425px) {
+        .mainMarginTop {
+                margin-top: 2em;
+        }
+        .mainMarginBottom {
+                margin-top: 2em;
+        }
+        .pageHeading {
+                margin-bottom: 0.5em;
+                font-size: 2rem;
+        }
+}

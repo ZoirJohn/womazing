@@ -24,7 +24,7 @@
         top: 0;
         width: 50px;
         height: 50px;
-        transition: all 400ms ease;
+        transition: all 500ms ease;
         width: 100%;
         height: 100%;
         opacity: 0;
@@ -34,7 +34,7 @@
         position: absolute;
         top: 50%;
         opacity: 0;
-        transition: all 400ms ease;
+        transition: all 500ms ease;
 }
 .collectionCard:hover .cardImg::before {
         background: var(--primary-color);
@@ -53,6 +53,11 @@
 }
 .cardImg img {
         width: 100%;
+}
+@media (max-width: 768px) {
+        .cardImg {
+                margin-bottom: 1em;
+        }
 }
 @media (max-width: 425px) {
         .collectionCardRow {

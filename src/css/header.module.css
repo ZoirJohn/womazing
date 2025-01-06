@@ -70,6 +70,10 @@
         }
 }
 @media (max-width: 768px) {
+        #white .headerContainer {
+                padding-top: 10px;
+                padding-bottom: 10px;
+        }
         .nav {
                 z-index: 2;
                 display: flex;
