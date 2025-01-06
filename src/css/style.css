@@ -18,7 +18,7 @@ body,
 html {
         height: 100%;
 }
-h1{
+h1 {
         font-size: 40px;
         font-weight: 500;
 }
@@ -66,4 +66,19 @@ main {
 }
 .mainMarginBottom {
         margin-top: 8.666em;
+}
+.pageHeading {
+        margin-bottom: 2.25em;
+}
+@media (max-width: 768px) {
+        .mainMarginTop {
+                margin-top: 2.666em;
+        }
+        .mainMarginBottom {
+                margin-top: 2.666em;
+        }
+        .pageHeading {
+                margin-bottom: 2.25em;
+                font-size: 2rem;
+        }
 }

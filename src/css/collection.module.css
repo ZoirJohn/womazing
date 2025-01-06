@@ -1,0 +1,61 @@
+.collectionCardRow {
+        padding: 0 0 4.3em;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 3fr));
+        gap: 2em;
+        text-align: center;
+}
+.collectionCard {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+}
+.cardImg {
+        margin: 0 0 2.5em;
+        position: relative;
+}
+.cardImg::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        transition: all 400ms ease;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+}
+.cardImg::after {
+        content: url('../images/arrow-light.svg');
+        position: absolute;
+        top: 50%;
+        opacity: 0;
+        transition: all 400ms ease;
+}
+.collectionCard:hover .cardImg::before {
+        background: var(--primary-color);
+        opacity: 0.64;
+}
+.collectionCard:hover .cardImg::after {
+        opacity: 1;
+}
+.cardInfo__name p {
+        font-weight: 500;
+        font-size: 1.33rem;
+}
+.cardInfo__price p {
+        color: #998e78;
+        font-weight: 500;
+}
+.cardImg img {
+        width: 100%;
+}
+@media (max-width: 425px) {
+        .collectionCardRow {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+        }
+}
