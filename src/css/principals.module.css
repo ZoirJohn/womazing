@@ -1,0 +1,42 @@
+.principalsRow {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 3fr));
+        gap: 2em;
+}
+.principalImg img {
+        width: 4em;
+        height: 4em;
+}
+.principalCol {
+        display: flex;
+        justify-content: center;
+}
+.principal {
+        padding: 0 3em 0 0;
+        max-width: 350px;
+}
+.principalName {
+        padding: 2.5em 0 1.6em;
+}
+.principalName h3 {
+        font-size: 1.7rem;
+        font-weight: 500;
+}
+.principalDef p {
+        font-size: 1.14rem;
+        font-weight: 500;
+}
+@media (max-width: 768px) {
+        .principalName {
+                padding-top: 1.5em;
+        }
+}
+@media (max-width: 375px) {
+        .principalsRow {
+                grid-template-columns: repeat(auto-fit, minmax(290px, 3fr));
+        }
+        .principal {
+                padding-right: 0;
+        }
+}

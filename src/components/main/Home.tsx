@@ -12,6 +12,8 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { getHomeHeader, getHomeParagraph } from '../../selector'
 import Collection from './Collection'
+import Principals from './Principals'
+import Team from './Team'
 
 type TProps = {}
 
@@ -39,7 +41,7 @@ const Home: FC<TProps> = (props) => {
                                                         <div className={styles.homeText}>
                                                                 <h1>{homeHeader}</h1>
                                                                 <p>{homeParagraph}</p>
-                                                                <Link to={'/shop'} className={styles.homeText__button}>
+                                                                <Link to={'/shop'} className={`${styles.homeText__button} primaryButton`}>
                                                                         <p>Открыть магазин</p>
                                                                 </Link>
                                                         </div>
@@ -55,6 +57,8 @@ const Home: FC<TProps> = (props) => {
                                 </div>
                         </section>
                         <Collection />
+                        <Principals />
+                        <Team />
                 </>
         )
 }

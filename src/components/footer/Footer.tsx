@@ -16,7 +16,7 @@ const Footer: FC<TProps> = (props) => {
         }
 
         return (
-                <footer className={styles.footer}>
+                <footer className={`${styles.footer} mainMarginTop`}>
                         <div className={`container ${styles.footerContainer}`}>
                                 <div className={styles.logo}>
                                         <Link to={'/home'}>

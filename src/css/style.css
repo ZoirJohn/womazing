@@ -40,10 +40,13 @@ main {
         --primary-color: #6e9c9f;
         --secondary-color: #f1eadc;
         --swiper-pagination-color: #6e9c9f;
+        --swiper-theme-color: #6e9c9f;
         --swiper-pagination-bullet-size: 4px;
         --swiper-pagination-bullet-width: 30px;
         --swiper-pagination-bullet-inactive-color: #000;
         --swiper-pagination-bullet-border-radius: 0;
+        --transition: all 500ms ease;
+        --swiper-pagination-bottom: 4em;
 }
 .container {
         max-width: 1130px;
@@ -70,6 +73,28 @@ main {
 .pageHeading {
         margin-bottom: 2.25em;
 }
+.primaryButton {
+        padding: 1.5em 3.3em;
+        background: var(--primary-color);
+        color: #fff;
+        transition: var(--transition);
+        display: inline-block;
+}
+.secondaryButton {
+        padding: 1.5em 3.3em;
+        background: #fff;
+        color: var(--primary-color);
+        outline: 1px solid var(--primary-color);
+        transition: var(--transition);
+        display: inline-block;
+}
+.primaryButton:hover {
+        background: #509498;
+}
+.secondaryButton:hover {
+        background: #6e9c9f;
+        color: #fff;
+}
 @media (max-width: 768px) {
         .mainMarginTop {
                 margin-top: 2.666em;
@@ -93,4 +118,15 @@ main {
                 margin-bottom: 0.5em;
                 font-size: 2rem;
         }
+}
+.swiper-button-prev,
+.swiper-button-next {
+        padding: 1em;
+}
+
+.swiper-button-prev::after {
+        content: url(../images/prev.svg) !important;
+}
+.swiper-button-next::after {
+        content: url(../images/next.svg) !important;
 }

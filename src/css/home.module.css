@@ -58,11 +58,7 @@
 .homeText__button {
         position: relative;
         align-self: center;
-        background: var(--primary-color);
-        text-decoration: none;
-        color: #fff;
-        font-family: 'Raleway';
-        padding: 1.5em 3.3em;
+      
 }
 .homeText__button::before {
         content: url('../images/arrow.svg');

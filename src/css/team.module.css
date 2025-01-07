@@ -1,0 +1,24 @@
+:root{
+        --swiper-pagination-color: #fff;
+
+}
+.team {
+        width: 100%;
+}
+.teamContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+}
+.swiper {
+        width: 100%;
+        grid-column: 1/3;
+        grid-row: 2/3;
+}
+.teamText {
+        grid-column: 3/4;
+        grid-row: 2/3;
+}
+.swiperSlide {
+        max-width: 730px;
+}

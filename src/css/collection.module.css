@@ -1,3 +1,7 @@
+.collectionContainer {
+        display: flex;
+        flex-direction: column;
+}
 .collectionCardRow {
         padding: 0 0 4.3em;
         display: grid;
@@ -24,7 +28,7 @@
         top: 0;
         width: 50px;
         height: 50px;
-        transition: all 500ms ease;
+        transition: var(--transition);
         width: 100%;
         height: 100%;
         opacity: 0;
@@ -34,7 +38,7 @@
         position: absolute;
         top: 50%;
         opacity: 0;
-        transition: all 500ms ease;
+        transition: var(--transition);
 }
 .collectionCard:hover .cardImg::before {
         background: var(--primary-color);
@@ -53,6 +57,9 @@
 }
 .cardImg img {
         width: 100%;
+}
+.collectionBtn{
+        align-self: center;
 }
 @media (max-width: 768px) {
         .cardImg {

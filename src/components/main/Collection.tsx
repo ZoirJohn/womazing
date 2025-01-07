@@ -12,16 +12,19 @@ const Collection: FC<TProps> = (props) => {
         const names = ['Футболка USA', 'Купальник Glow', 'Свитшот Sweet Shot']
         const prices = [129, 129, 129]
         const images = [img1, img2, img3]
+        const dataNames = ['shirt', 'swimwear', 'sweetshot']
         return (
                 <section className={`${styles.collection} mainMarginTop`}>
                         <div className={`container ${styles.collectionContainer}`}>
                                 <h1 className='pageHeading'>Новая коллекция</h1>
                                 <div className={styles.collectionCardRow}>
                                         {names.map((e, id) => {
-                                                return <CollectionCard name={e} price={prices[id]} img={images[id]} key={id} />
+                                                return <CollectionCard name={e} price={prices[id]} img={images[id]} key={id} dataName={dataNames[id]} />
                                         })}
                                 </div>
-                                <Link to={'/shop'}>Открыть магазин</Link>
+                                <Link to={'/shop'} className={`${styles.collectionBtn} secondaryButton`}>
+                                        Открыть магазин
+                                </Link>
                         </div>
                 </section>
         )
