@@ -43,10 +43,13 @@ main {
         --swiper-theme-color: #6e9c9f;
         --swiper-pagination-bullet-size: 4px;
         --swiper-pagination-bullet-width: 30px;
-        --swiper-pagination-bullet-inactive-color: #000;
+        --swiper-pagination-bullet-inactive-color: #424242;
+        --swiper-pagination-color: #000;
+        --swiper-pagination-bullet-active-color: #000;
         --swiper-pagination-bullet-border-radius: 0;
         --transition: all 500ms ease;
         --swiper-pagination-bottom: 4em;
+        --swiper-navigation-sides-offset: -4em;
 }
 .container {
         max-width: 1130px;
@@ -87,6 +90,27 @@ main {
         outline: 1px solid var(--primary-color);
         transition: var(--transition);
         display: inline-block;
+}
+.linkButton {
+        font-size: 17px;
+        color: var(--primary-color);
+        font-weight: 500;
+        position: relative;
+}
+.linkButton::after {
+        content: '';
+        display: block;
+        width: 0%;
+        height: 1px;
+        background: var(--primary-color);
+        position: absolute;
+        bottom: -5px;
+        right: 50%;
+        transition: var(--transition);
+}
+.linkButton:hover::after {
+        width: 100%;
+        right: 0;
 }
 .primaryButton:hover {
         background: #509498;
@@ -129,4 +153,15 @@ main {
 }
 .swiper-button-next::after {
         content: url(../images/next.svg) !important;
+}
+@media (max-width: 1300px) {
+        :root {
+                --swiper-navigation-sides-offset: 0;
+                --swiper-pagination-bottom: 3em;
+        }
+}
+@media (max-width: 425px) {
+        :root {
+                --swiper-pagination-bottom: 0.5em;
+        }
 }
