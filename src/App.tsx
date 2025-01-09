@@ -1,11 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { useState } from 'react'
+
 import Header from './components/header/Header'
 import NotFound from './components/404'
 import Footer from './components/footer/Footer'
 import Home from './components/main/Home'
-import { Provider } from 'react-redux'
+import Shop from './components/shop/Shop'
 import store from './store'
-import { useEffect, useState } from 'react'
+import About from './components/about/About'
+
 function App() {
         const [burgerState, setBurgerState] = useState(false)
         const body = document.getElementsByTagName('body')
@@ -22,6 +26,8 @@ function App() {
                                         <main>
                                                 <Routes>
                                                         <Route path='/' element={<Home />} />
+                                                        <Route path='/shop' element={<Shop />} />
+                                                        <Route path='/about' element={<About />} />
                                                         <Route path='*' element={<NotFound />} />
                                                 </Routes>
                                         </main>

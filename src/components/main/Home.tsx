@@ -39,7 +39,7 @@ const Home: FC<TProps> = (props) => {
                                         >
                                                 <SwiperSlide>
                                                         <div className={styles.homeText}>
-                                                                <h1>{homeHeader}</h1>
+                                                                <h1 className='mainHeading'>{homeHeader}</h1>
                                                                 <p>{homeParagraph}</p>
                                                                 <Link to={'/shop'} className={`${styles.homeText__button} primaryButton`}>
                                                                         <p>Открыть магазин</p>

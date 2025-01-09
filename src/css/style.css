@@ -73,6 +73,10 @@ main {
 .mainMarginBottom {
         margin-top: 8.666em;
 }
+.mainHeading {
+        font-size: 3.5rem;
+        font-weight: 500;
+}
 .pageHeading {
         margin-bottom: 2.25em;
 }

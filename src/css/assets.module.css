@@ -1,0 +1,25 @@
+.pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        margin: 20px 0;
+}
+.button {
+        padding: 8px 16px;
+        outline: 1px solid #000;
+        background: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        border: none;
+        font-size: 17px;
+        font-weight: 500;
+}
+.activeButton {
+        background-color: #000;
+        color: #fff;
+        outline: 1px solid #000;
+}
+
+.button:disabled {
+}
