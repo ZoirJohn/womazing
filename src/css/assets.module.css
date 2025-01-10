@@ -18,8 +18,17 @@
 .activeButton {
         background-color: #000;
         color: #fff;
-        outline: 1px solid #000;
 }
 
-.button:disabled {
+.filter {
+        font-size: 17px;
+        font-weight: 500;
+        padding: 1.1em 4em;
+        background: #fff;
+        outline: 1px solid #000;
+        border: none;
+}
+.activeFilter {
+        background-color: #000;
+        color: #fff;
 }

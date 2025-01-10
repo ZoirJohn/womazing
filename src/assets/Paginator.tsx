@@ -17,7 +17,7 @@ const Paginator: React.FC<PaginationProps> = ({ totalItems, onPageChange }) => {
 
         return (
                 <div className={styles.pagination}>
-                        <button className={styles.button} onClick={() => changePage(currentPage - 1)} disabled={currentPage === 1}>
+                        <button className={styles.button} onClick={(e) => changePage(currentPage - 1)} disabled={currentPage === 1}>
                                 &laquo;
                         </button>
 
@@ -29,7 +29,7 @@ const Paginator: React.FC<PaginationProps> = ({ totalItems, onPageChange }) => {
                                 )
                         })}
 
-                        <button className={styles.button} onClick={() => changePage(currentPage + 1)} disabled={currentPage === totalPages}>
+                        <button className={styles.button} onClick={(e) => changePage(currentPage + 1)} disabled={currentPage === totalPages}>
                                 &raquo;
                         </button>
                 </div>

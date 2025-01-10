@@ -12,3 +12,9 @@ export const getCardInformation = (state: RootState) => {
 export const getCurrentPage = (state: RootState) => {
         return state.shop.currentPage
 }
+export const getCurrentFilter = (state: RootState) => {
+        return state.shop.currentFilter
+}
+export const getFilterNames = (state: RootState) => {
+        return state.shop.filterNames
+}
