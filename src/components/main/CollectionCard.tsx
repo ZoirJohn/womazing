@@ -6,12 +6,13 @@ type TProps = {
         name: string
         price: number
         img: string
-        dataName:string
+        dataName: string
+        link: string
 }
 
-const CollectionCard: FC<TProps> = ({ name, price, img,dataName }) => {
+const CollectionCard: FC<TProps> = ({ name, price, img, dataName, link }) => {
         return (
-                <Link to={'/shop'}>
+                <Link to={link}>
                         <div className={styles.collectionCard} data-name={dataName}>
                                 <div className={styles.cardImg}>
                                         <img src={img} alt='cardImage' />

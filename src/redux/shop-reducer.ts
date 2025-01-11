@@ -15,6 +15,7 @@ let initialState = {
                 { name: 'Свитшот Sweet Shot', price: 129, img: img3, dataName: 'свитшоты' },
                 { name: 'Футболка USA', price: 129, img: img1, dataName: 'футболки' },
                 { name: 'Купальник Glow', price: 129, img: img2, dataName: 'купальники' },
+                { name: 'Свитшот Sweet Shot', price: 129, img: img3, dataName: 'свитшоты' },
         ],
         currentPage: 1 as number,
         currentFilter: 'все' as string,

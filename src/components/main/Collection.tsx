@@ -19,7 +19,7 @@ const Collection: FC<TProps> = (props) => {
                                 <h1 className='pageHeading'>Новая коллекция</h1>
                                 <div className={styles.collectionCardRow}>
                                         {names.map((e, id) => {
-                                                return <CollectionCard name={e} price={prices[id]} img={images[id]} key={id} dataName={dataNames[id]} />
+                                                return <CollectionCard name={e} price={prices[id]} img={images[id]} key={id} dataName={dataNames[id]} link={'/shop'} />
                                         })}
                                 </div>
                                 <Link to={'/shop'} className={`${styles.collectionBtn} secondaryButton`}>

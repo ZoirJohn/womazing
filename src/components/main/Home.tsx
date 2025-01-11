@@ -46,8 +46,24 @@ const Home: FC<TProps> = (props) => {
                                                                 </Link>
                                                         </div>
                                                 </SwiperSlide>
-                                                <SwiperSlide>Hoya</SwiperSlide>
-                                                <SwiperSlide>Shiya</SwiperSlide>
+                                                <SwiperSlide>
+                                                        <div className={styles.homeText}>
+                                                                <h1 className='mainHeading'>{homeHeader}</h1>
+                                                                <p>{homeParagraph}</p>
+                                                                <Link to={'/shop'} className={`${styles.homeText__button} primaryButton`}>
+                                                                        <p>Открыть магазин</p>
+                                                                </Link>
+                                                        </div>
+                                                </SwiperSlide>
+                                                <SwiperSlide>
+                                                        <div className={styles.homeText}>
+                                                                <h1 className='mainHeading'>{homeHeader}</h1>
+                                                                <p>{homeParagraph}</p>
+                                                                <Link to={'/shop'} className={`${styles.homeText__button} primaryButton`}>
+                                                                        <p>Открыть магазин</p>
+                                                                </Link>
+                                                        </div>
+                                                </SwiperSlide>
                                         </Swiper>
                                         <div className={styles.homePhotos}>
                                                 <img src={woman1} alt='woman' />

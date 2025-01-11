@@ -14,33 +14,38 @@ const Shop: FC<TProps> = (props) => {
         const currentPage = useSelector(getCurrentPage)
         const filterNames = useSelector(getFilterNames)
         const currentFilter = useSelector(getCurrentFilter)
+        const cardInformation = useSelector(getCardInformation)
         const handlePageChange = (page: number) => {
                 dispatch(setCurrentPage(page))
         }
         const handleFilter = (filter: string) => {
                 dispatch(setCurrentFilter(filter))
         }
-        const cardInformation = useSelector(getCardInformation)
         return (
                 <section className={styles.shop}>
                         <div className={`${styles.shopContainer} container`}>
                                 <Filter filterNames={filterNames} onPageChange={handleFilter} />
+                                <p>
+                                        Показано: {cardInformation.length < 10 ? 9 : cardInformation.length - (Math.ceil(cardInformation.length / 9) - 1) * 9} из {cardInformation.length} товаров
+                                </p>
                                 <div className={styles.shopCardRow}>
                                         {currentPage !== 1
                                                 ? cardInformation.slice(9 * (currentPage - 1), 9 * currentPage).map((obj, key) => {
+                                                          const Card = <CollectionCard img={obj.img} dataName={obj.dataName} name={obj.name} price={obj.price} key={key} link={'shop/1'} />
                                                           if (obj.dataName === currentFilter) {
-                                                                  return <CollectionCard img={obj.img} dataName={obj.dataName} name={obj.name} price={obj.price} key={key} />
+                                                                  return Card
                                                           } else if (currentFilter === 'все') {
-                                                                  return <CollectionCard img={obj.img} dataName={obj.dataName} name={obj.name} price={obj.price} key={key} />
+                                                                  return Card
                                                           } else {
                                                                   return
                                                           }
                                                   })
                                                 : cardInformation.slice(9 * (currentPage - 1), 9 * currentPage).map((obj, key) => {
+                                                          const Card = <CollectionCard img={obj.img} dataName={obj.dataName} name={obj.name} price={obj.price} key={key} link={'/shop/1'} />
                                                           if (obj.dataName === currentFilter) {
-                                                                  return <CollectionCard img={obj.img} dataName={obj.dataName} name={obj.name} price={obj.price} key={key} />
+                                                                  return Card
                                                           } else if (currentFilter === 'все') {
-                                                                  return <CollectionCard img={obj.img} dataName={obj.dataName} name={obj.name} price={obj.price} key={key} />
+                                                                  return Card
                                                           } else {
                                                                   return
                                                           }

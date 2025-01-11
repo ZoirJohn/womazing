@@ -13,7 +13,7 @@ const Filter: React.FC<PaginationProps> = ({ filterNames, onPageChange }) => {
                 onPageChange(newPage)
         }
         return (
-                <div className={styles.pagination}>
+                <div className={`${styles.filterBox} mainMarginBottom`}>
                         {filterNames.map((page) => {
                                 return (
                                         <button
