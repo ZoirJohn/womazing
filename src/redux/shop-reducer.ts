@@ -19,7 +19,7 @@ let initialState = {
         ],
         currentPage: 1 as number,
         currentFilter: 'все' as string,
-        filterNames: ['все', 'свитшоты', 'футболки', 'купальники'],
+        filterNames: ['все', 'свитшоты', 'футболки', 'купальники', 'кардиганы'],
 }
 
 const shopReducer = (_state = initialState, action: any): typeof initialState => {

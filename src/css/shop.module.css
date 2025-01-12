@@ -2,10 +2,15 @@
         width: 100%;
 }
 .shopCardRow {
-        padding: 0 0 4.3em;
+        padding: 4.3em 0 4.3em;
         display: grid;
         justify-content: center;
         grid-template-columns: repeat(auto-fit, minmax(350px, 3fr));
         gap: 2em;
         text-align: center;
+}
+.cardDetails {
+        font-size: 17px;
+        font-weight: 500;
+        color: #808080;
 }

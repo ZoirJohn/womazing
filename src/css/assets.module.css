@@ -15,6 +15,12 @@
         font-size: 17px;
         font-weight: 500;
 }
+.paginationButton {
+        padding: 8px 16px;
+        border: none;
+        background: #fff;
+        cursor: pointer;
+}
 .activeButton {
         background-color: #000;
         color: #fff;
@@ -38,4 +44,19 @@
         justify-content: start;
         align-items: center;
         gap: 1em;
+        margin: 0 0 6em;
+}
+
+@media (max-width: 1200px) {
+        .filter {
+                padding: 0.5em 2em;
+        }
+}@media (max-width: 992px) {
+        .filter {
+                padding: 0.5em 1.5em;
+        }
+}@media (max-width: 768px) {
+        .filter {
+                padding: 0.5em 1em;
+        }
 }

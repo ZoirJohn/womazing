@@ -6,6 +6,8 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import styles from '../../css/team.module.css'
 import fam from '../../images/fam.png'
+import team from '../../images/team.png'
+import eld from '../../images/eld.png'
 import { Link } from 'react-router-dom'
 
 type TProps = {}
@@ -29,10 +31,10 @@ const Team: FC<TProps> = (props) => {
                                                 <img src={fam} alt='family' />
                                         </SwiperSlide>
                                         <SwiperSlide className={styles.swiperSlide}>
-                                                <img src={fam} alt='family' />
+                                                <img src={team} alt='team' />
                                         </SwiperSlide>
                                         <SwiperSlide className={styles.swiperSlide}>
-                                                <img src={fam} alt='family' />
+                                                <img src={eld} alt='eld' />
                                         </SwiperSlide>
                                 </Swiper>
                                 <div className={styles.teamText}>
@@ -44,7 +46,9 @@ const Team: FC<TProps> = (props) => {
                                                 <p>Womazing ищет эти мелочи и создает прекрасные вещи, которые выгодно подчеркивают достоинства каждой девушки.</p>
                                         </div>
                                         <div className={styles.teamText__button}>
-                                                <Link to={'/about'} className='linkButton'>Подробнее о бренде</Link>
+                                                <Link to={'/about'} className='linkButton'>
+                                                        Подробнее о бренде
+                                                </Link>
                                         </div>
                                 </div>
                         </div>

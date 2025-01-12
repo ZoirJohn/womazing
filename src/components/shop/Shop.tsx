@@ -7,9 +7,11 @@ import { getCardInformation, getFilterNames, getCurrentFilter } from '../../sele
 import { setCurrentFilter, setCurrentPage } from '../../redux/shop-reducer'
 import { getCurrentPage } from '../../selector'
 import Filter from '../../assets/Filter'
+import { useNavigate } from 'react-router-dom'
 
 type TProps = {}
 const Shop: FC<TProps> = (props) => {
+        const nav = useNavigate()
         const dispatch = useDispatch()
         const currentPage = useSelector(getCurrentPage)
         const filterNames = useSelector(getFilterNames)
@@ -25,8 +27,14 @@ const Shop: FC<TProps> = (props) => {
                 <section className={styles.shop}>
                         <div className={`${styles.shopContainer} container`}>
                                 <Filter filterNames={filterNames} onPageChange={handleFilter} />
-                                <p>
-                                        Показано: {cardInformation.length < 10 ? 9 : cardInformation.length - (Math.ceil(cardInformation.length / 9) - 1) * 9} из {cardInformation.length} товаров
+                                <p className={styles.cardDetails}>
+                                        Показано:{' '}
+                                        {cardInformation.length < 10
+                                                ? 9
+                                                : cardInformation.length > 9 && Math.ceil(cardInformation.length / 9) !== currentPage
+                                                ? 9
+                                                : cardInformation.length - (currentPage - 1) * 9}{' '}
+                                        из {cardInformation.length} товаров
                                 </p>
                                 <div className={styles.shopCardRow}>
                                         {currentPage !== 1
