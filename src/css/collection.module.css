@@ -16,6 +16,7 @@
         align-items: center;
         flex-direction: column;
         cursor: pointer;
+        overflow: hidden;
 }
 .cardImg {
         margin: 0 0 2.5em;
@@ -58,13 +59,15 @@
 .cardImg img {
         width: 100%;
 }
-.collectionBtn{
+.collectionBtn {
         align-self: center;
 }
 @media (max-width: 768px) {
         .cardImg {
                 margin-bottom: 1em;
+                width: 100%;
         }
+        
 }
 @media (max-width: 425px) {
         .collectionCardRow {

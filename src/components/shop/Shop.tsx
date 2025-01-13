@@ -24,13 +24,13 @@ const Shop: FC<TProps> = (props) => {
                 dispatch(setCurrentFilter(filter))
         }
         return (
-                <section className={styles.shop}>
+                <section className={`${styles.shop} mainMarginTop`}>
                         <div className={`${styles.shopContainer} container`}>
                                 <Filter filterNames={filterNames} onPageChange={handleFilter} />
                                 <p className={styles.cardDetails}>
                                         Показано:{' '}
                                         {cardInformation.length < 10
-                                                ? 9
+                                                ? cardInformation.length
                                                 : cardInformation.length > 9 && Math.ceil(cardInformation.length / 9) !== currentPage
                                                 ? 9
                                                 : cardInformation.length - (currentPage - 1) * 9}{' '}
