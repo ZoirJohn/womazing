@@ -22,6 +22,10 @@ h1 {
         font-size: 40px;
         font-weight: 500;
 }
+h4 {
+        font-size: 25px;
+        font-weight: 500;
+}
 body.active {
         overflow: hidden;
 }
@@ -168,4 +172,27 @@ main {
         :root {
                 --swiper-pagination-bottom: 0.5em;
         }
+}
+
+.pageHeader {
+        margin: 0 0 0.5em;
+}
+.pageNavigation {
+        margin: 0 0 2em;
+}
+.breadcrumb {
+        font-size: 17px;
+        font-weight: 500;
+}
+.breadcrumbCurrent {
+        font-weight: 500;
+        color: #909090;
+}
+.breadcrumbCurrent::before {
+        content: '';
+        height: 1px;
+        width: 10px;
+        background: #000;
+        display: inline-block;
+        margin: 0 0.5em 0.2em;
 }

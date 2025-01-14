@@ -1,0 +1,56 @@
+.about {
+        width: 100%;
+}
+.shopContainer {
+        display: flex;
+        flex-direction: column;
+}
+.aboutRow {
+        display: flex;
+        flex-direction: column;
+        gap: 9em;
+}
+.aboutPrincipals {
+        display: flex;
+        align-items: center;
+        gap: 6em;
+}
+.aboutPrincipals:nth-child(2) {
+        flex-direction: row-reverse;
+}
+.aboutPrincipals img {
+        display: block;
+}
+.principalsText {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+}
+.principalsText p {
+        font-size: 17px;
+        font-weight: 500;
+}
+.shopButton {
+        margin: 8em auto 0;
+}
+
+@media (max-width: 992px) {
+        .aboutPrincipals {
+                gap: 3em;
+        }
+}
+@media (max-width: 768px) {
+        .aboutPrincipals {
+                flex-direction: column !important;
+                padding: 0 4em;
+        }
+}
+@media (max-width: 440px) {
+        .aboutPrincipals {
+                flex-direction: column !important;
+                padding: 0;
+        }
+        .aboutPrincipals img {
+                width: 100%;
+        }
+}

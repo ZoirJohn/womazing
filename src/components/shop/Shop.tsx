@@ -28,11 +28,11 @@ const Shop: FC<TProps> = (props) => {
         return (
                 <section className={styles.shop}>
                         <div className={`${styles.shopContainer} container`}>
-                                <div className={styles.shopNavigation}>
-                                        <h1 className={styles.shopHeading}>Магазин</h1>
-                                        <div className={styles.breadcrumb}>
+                                <div className={'pageNavigation'}>
+                                        <h1 className={'pageHeader'}>Магазин</h1>
+                                        <div className={'breadcrumb'}>
                                                 {main}
-                                                <span className={styles.breadcrumbCurrent}>{current}</span>
+                                                <span className={'breadcrumbCurrent'}>{current}</span>
                                         </div>
                                 </div>
                                 <Filter filterNames={filterNames} onPageChange={handleFilter} />
