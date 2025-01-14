@@ -2,6 +2,12 @@
 .shopContainer {
         width: 100%;
 }
+.shopNavigation{
+        margin: 0 0 1em;
+}
+.shopHeading {
+        margin: 0 0 0.5em;
+}
 .shopCardRow {
         padding: 4.3em 0 4.3em;
         display: grid;
@@ -14,6 +20,22 @@
         font-size: 17px;
         font-weight: 500;
         color: #808080;
+}
+.breadcrumb {
+        font-size: 17px;
+        font-weight: 500;
+}
+.breadcrumbCurrent {
+        font-weight: 500;
+        color: #909090;
+}
+.breadcrumbCurrent::before {
+        content: '';
+        height: 1px;
+        width: 10px;
+        background: #000;
+        display: inline-block;
+        margin: 0 0.5em 0.2em;
 }
 @media (max-width: 425px) {
         .shopCardRow {

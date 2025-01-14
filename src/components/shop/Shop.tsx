@@ -23,9 +23,18 @@ const Shop: FC<TProps> = (props) => {
         const handleFilter = (filter: string) => {
                 dispatch(setCurrentFilter(filter))
         }
+        const main = 'Главная'
+        const current = 'Магазин'
         return (
-                <section className={`${styles.shop} mainMarginTop`}>
+                <section className={styles.shop}>
                         <div className={`${styles.shopContainer} container`}>
+                                <div className={styles.shopNavigation}>
+                                        <h1 className={styles.shopHeading}>Магазин</h1>
+                                        <div className={styles.breadcrumb}>
+                                                {main}
+                                                <span className={styles.breadcrumbCurrent}>{current}</span>
+                                        </div>
+                                </div>
                                 <Filter filterNames={filterNames} onPageChange={handleFilter} />
                                 <p className={styles.cardDetails}>
                                         Показано:{' '}
