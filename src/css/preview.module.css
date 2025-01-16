@@ -1,0 +1,71 @@
+.previewPage {
+        display: flex;
+        align-items: center;
+        gap: 5em;
+}
+.previewDesciption {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+}
+.previewImage {
+        display: block;
+        width: 100%;
+        max-width: 536px;
+}
+.previewImage img {
+        width: 100%;
+}
+.previewPrice h2 {
+        font-size: 2.6rem;
+        font-weight: 500;
+        color: #998e78;
+}
+.previewColor,
+.previewSize {
+        display: flex;
+        gap: 2em;
+        flex-direction: column;
+}
+.previewSize div span {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 17px;
+        cursor: pointer;
+        font-weight: 500;
+}
+.previewColor span {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+}
+.previewColor h5,
+.previewSize h5 {
+        font-size: 20px;
+        font-weight: 500;
+}
+.previewColor div,
+.previewSize div {
+        display: flex;
+        gap: 1em;
+}
+.previewColor div span {
+        cursor: pointer;
+}
+#brown {
+        background: #927876;
+}
+#grey {
+        background: #d4d4d4;
+}
+#red {
+        background: #fd9696;
+}
+#orange {
+        background: #fdc796;
+}

@@ -48,7 +48,9 @@ const Shop: FC<TProps> = (props) => {
                                 <div className={styles.shopCardRow}>
                                         {currentPage !== 1
                                                 ? cardInformation.slice(9 * (currentPage - 1), 9 * currentPage).map((obj, key) => {
-                                                          const Card = <CollectionCard img={obj.img} dataName={obj.dataName} name={obj.name} price={obj.price} key={key} link={'preview'} />
+                                                          const Card = (
+                                                                  <CollectionCard img={obj.img} dataName={obj.dataName} name={obj.name} price={obj.price} key={key} link={'/preview/' + (key + 1)} />
+                                                          )
                                                           if (obj.dataName === currentFilter) {
                                                                   return Card
                                                           } else if (currentFilter === 'все') {
@@ -58,7 +60,9 @@ const Shop: FC<TProps> = (props) => {
                                                           }
                                                   })
                                                 : cardInformation.slice(9 * (currentPage - 1), 9 * currentPage).map((obj, key) => {
-                                                          const Card = <CollectionCard img={obj.img} dataName={obj.dataName} name={obj.name} price={obj.price} key={key} link={'/preview'} />
+                                                          const Card = (
+                                                                  <CollectionCard img={obj.img} dataName={obj.dataName} name={obj.name} price={obj.price} key={key} link={'/preview/' + (key + 1)} />
+                                                          )
                                                           if (obj.dataName === currentFilter) {
                                                                   return Card
                                                           } else if (currentFilter === 'все') {

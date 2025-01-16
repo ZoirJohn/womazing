@@ -2,6 +2,7 @@
         "name": "womazing",
         "version": "0.1.0",
         "private": true,
+        "homepage": "https://zoirjohn.github.io/womazing",
         "dependencies": {
                 "@reduxjs/toolkit": "^2.5.0",
                 "@testing-library/jest-dom": "^5.14.1",

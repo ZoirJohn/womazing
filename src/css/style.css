@@ -85,6 +85,7 @@ main {
         margin-bottom: 2.25em;
 }
 .primaryButton {
+        font-size: 17px;
         padding: 1.5em 3.3em;
         background: var(--primary-color);
         color: #fff;
@@ -92,6 +93,7 @@ main {
         display: inline-block;
 }
 .secondaryButton {
+        font-size: 17px;
         padding: 1.5em 3.3em;
         background: #fff;
         color: var(--primary-color);
@@ -180,7 +182,8 @@ main {
 .pageNavigation {
         margin: 0 0 2em;
 }
-.breadcrumb {
+.breadcrumb,
+.breadcrumbCargo {
         font-size: 17px;
         font-weight: 500;
 }
@@ -188,11 +191,9 @@ main {
         font-weight: 500;
         color: #909090;
 }
-.breadcrumbCurrent::before {
-        content: '';
-        height: 1px;
-        width: 10px;
-        background: #000;
+.breadcrumbCurrent::before,
+.breadcrumbCargo::before {
+        content: '—';
         display: inline-block;
         margin: 0 0.5em 0.2em;
 }
