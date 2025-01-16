@@ -9,6 +9,7 @@ import Home from './components/main/Home'
 import Shop from './components/shop/Shop'
 import store from './store'
 import About from './components/about/About'
+import Preview from './components/preview/Preview'
 
 function App() {
         const [burgerState, setBurgerState] = useState(false)
@@ -26,8 +27,9 @@ function App() {
                                         <main>
                                                 <Routes>
                                                         <Route path='/' element={<Home />} />
-                                                        <Route path='/shop/:shopId?' element={<Shop />} />
+                                                        <Route path='/shop' element={<Shop />} />
                                                         <Route path='/about' element={<About />} />
+                                                        <Route path='/preview' element={<Preview />} />
                                                         <Route path='*' element={<NotFound />} />
                                                 </Routes>
                                         </main>
