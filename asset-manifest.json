@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/womazing/static/css/main.a0a23f8c.css",
-    "main.js": "/womazing/static/js/main.cad21f03.js",
+    "main.js": "/womazing/static/js/main.fdf8f2e6.js",
     "static/media/eld.png": "/womazing/static/media/eld.56bb70598d42f45e46fe.png",
     "static/media/fam.png": "/womazing/static/media/fam.d85d76a8a8d3cac165a8.png",
     "static/media/team.png": "/womazing/static/media/team.ba2b041019d0ceeaaa38.png",
@@ -23,10 +23,10 @@
     "static/media/arrow.svg": "/womazing/static/media/arrow.481ba5894f2c94cdd441.svg",
     "static/media/arrow-light.svg": "/womazing/static/media/arrow-light.007389f4d91a7112f59b.svg",
     "main.a0a23f8c.css.map": "/womazing/static/css/main.a0a23f8c.css.map",
-    "main.cad21f03.js.map": "/womazing/static/js/main.cad21f03.js.map"
+    "main.fdf8f2e6.js.map": "/womazing/static/js/main.fdf8f2e6.js.map"
   },
   "entrypoints": [
     "static/css/main.a0a23f8c.css",
-    "static/js/main.cad21f03.js"
+    "static/js/main.fdf8f2e6.js"
   ]
 }
