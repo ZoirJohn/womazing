@@ -3,6 +3,7 @@ import styles from '../../css/preview.module.css'
 import { useSelector } from 'react-redux'
 import { getCardInformation } from '../../selector'
 import { useLocation } from 'react-router-dom'
+import CollectionCard from '../main/CollectionCard'
 
 type TProps = {}
 
@@ -12,10 +13,10 @@ const Preview: FC<TProps> = (props) => {
         const cargoName = 'Свитшоты'
         const cardInformation = useSelector(getCardInformation)
         const cargo = cardInformation[+useLocation().pathname.slice(9) - 1]
-        // const [active,setActive]=useState()
-        const setActive = (e: any) => {
-                console.log(e.target)
-        }
+        const [activeColor, setColor] = useState<string>('')
+        const [activeSize, setSize] = useState<string>('')
+        const rgb = ['#927876', '#D4D4D4', '#FD9696', '#FDC796']
+        const sizes = ['s', 'm', 'l', 'xl']
         return (
                 <section className={styles.preview}>
                         <div className={`${styles.previewContainer} container`}>
@@ -38,19 +39,33 @@ const Preview: FC<TProps> = (props) => {
                                                 <div className={styles.previewSize}>
                                                         <h5>Выберите размер</h5>
                                                         <div>
-                                                                <span onClick={setActive} className={styles.active}>S</span>
-                                                                <span onClick={setActive}>M</span>
-                                                                <span onClick={setActive}>L</span>
-                                                                <span onClick={setActive}>XL</span>
+                                                                {sizes.map((size) => {
+                                                                        return (
+                                                                                <span
+                                                                                        className={`${size === activeSize ? styles.activeSize : ''}`}
+                                                                                        style={{ textTransform: 'uppercase' }}
+                                                                                        onClick={() => setSize(size)}
+                                                                                        key={size}
+                                                                                >
+                                                                                        {size}
+                                                                                </span>
+                                                                        )
+                                                                })}
                                                         </div>
                                                 </div>
                                                 <div className={styles.previewColor}>
                                                         <h5>Выберите цвет</h5>
                                                         <div>
-                                                                <span id={styles.brown}></span>
-                                                                <span id={styles.grey}></span>
-                                                                <span id={styles.red}></span>
-                                                                <span id={styles.orange}></span>
+                                                                {rgb.map((color) => {
+                                                                        return (
+                                                                                <span
+                                                                                        className={`${styles.colors} ${color === activeColor && styles.activeColor}`}
+                                                                                        style={{ background: color }}
+                                                                                        onClick={() => setColor(color)}
+                                                                                        key={color}
+                                                                                ></span>
+                                                                        )
+                                                                })}
                                                         </div>
                                                 </div>
                                                 <div className={styles.previewCart}>
@@ -59,6 +74,10 @@ const Preview: FC<TProps> = (props) => {
                                                         </a>
                                                 </div>
                                         </div>
+                                </div>
+                                <div className={styles.associatedRow}>
+                                        {/* <div>Связанные товары</div> */}
+                                        <CollectionCard dataName={cardInformation[0].dataName} img={cardInformation[0].img} link='/about' name='Solo' price={234} key='key' />
                                 </div>
                         </div>
                 </section>

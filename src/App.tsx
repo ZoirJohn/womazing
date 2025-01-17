@@ -26,7 +26,7 @@ function App() {
                                         <Header setBurgerState={setBurgerState} burgerState={burgerState} />
                                         <main>
                                                 <Routes>
-                                                        <Route path='/' element={<Home />} />
+                                                        <Route path='/womazing' element={<Home />} />
                                                         <Route path='/shop' element={<Shop />} />
                                                         <Route path='/about' element={<About />} />
                                                         <Route path='/preview/:itemId?' element={<Preview />} />

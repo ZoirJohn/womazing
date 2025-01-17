@@ -54,7 +54,7 @@
         display: flex;
         gap: 1em;
 }
-.previewColor div span {
+.colors {
         cursor: pointer;
 }
 #brown {
@@ -68,4 +68,24 @@
 }
 #orange {
         background: #fdc796;
+}
+.activeColor {
+        border: 2px solid #000;
+}
+.activeSize {
+        background: #000;
+        color: #fff;
+}
+.associatedRow {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+@media (max-width: 768px) {
+        .previewPage {
+                flex-direction: column;
+                gap: 2.5em;
+        }
+        .previewImage {
+                width: 80%;
+        }
 }

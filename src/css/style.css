@@ -91,6 +91,7 @@ main {
         color: #fff;
         transition: var(--transition);
         display: inline-block;
+        text-wrap: nowrap;
 }
 .secondaryButton {
         font-size: 17px;
