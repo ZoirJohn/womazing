@@ -1,6 +1,6 @@
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import styles from '../../css/preview.module.css'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { getCardInformation } from '../../selector'
 import { useLocation } from 'react-router-dom'
 import CollectionCard from '../main/CollectionCard'
@@ -11,12 +11,33 @@ const Preview: FC<TProps> = (props) => {
         const main = 'Главная'
         const current = 'Свитшот Sweet Shot'
         const cargoName = 'Свитшоты'
+
+        const dispatch = useDispatch()
+
         const cardInformation = useSelector(getCardInformation)
         const cargo = cardInformation[+useLocation().pathname.slice(9) - 1]
+
         const [activeColor, setColor] = useState<string>('')
         const [activeSize, setSize] = useState<string>('')
+        const [orderReady, setOrderReady] = useState<boolean>(false)
+
         const rgb = ['#927876', '#D4D4D4', '#FD9696', '#FDC796']
         const sizes = ['s', 'm', 'l', 'xl']
+
+        const order = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+                e.preventDefault()
+
+                if (activeColor === '' || activeSize === '') {
+                        setOrderReady(true)
+                } else {
+                        dispatch({ type: '' })
+                }
+        }
+        useEffect(() => {
+                if (activeColor !== '' && activeSize !== '') {
+                        setOrderReady(false)
+                }
+        }, [activeColor, activeSize])
         return (
                 <section className={styles.preview}>
                         <div className={`${styles.previewContainer} container`}>
@@ -68,8 +89,9 @@ const Preview: FC<TProps> = (props) => {
                                                                 })}
                                                         </div>
                                                 </div>
+                                                <p className={styles.associatedError}>{orderReady ? 'ПОЖАЛУЙСТА ВЫБЕРИТЕ ЦВЕТ И РАЗМЕР' : ''}</p>
                                                 <div className={styles.previewCart}>
-                                                        <a href='' className='primaryButton'>
+                                                        <a href='' className='primaryButton' onClick={(e) => order(e)}>
                                                                 Добавить в корзину
                                                         </a>
                                                 </div>
@@ -78,7 +100,7 @@ const Preview: FC<TProps> = (props) => {
                                 <div className={styles.associated}>
                                         <h1>Связанные товары</h1>
                                         <div className={`${styles.associatedRow} mainMarginBottom`}>
-                                                {cardInformation.slice(0,2).map((card, key) => {
+                                                {cardInformation.slice(0, 2).map((card, key) => {
                                                         return <CollectionCard dataName={card.dataName} img={card.img} link={'/preview/' + (key + 1)} name={card.name} price={card.price} key={key} />
                                                 })}
                                         </div>
