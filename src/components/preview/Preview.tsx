@@ -28,7 +28,7 @@ const Preview: FC<TProps> = (props) => {
                                                 <span className={'breadcrumbCurrent'}>{current}</span>
                                         </div>
                                 </div>
-                                <div className={styles.previewPage}>
+                                <div className={`${styles.previewPage} mainMarginBottom`}>
                                         <div className={styles.previewImage}>
                                                 <img src={cargo.img} alt='image' />
                                         </div>
@@ -75,9 +75,13 @@ const Preview: FC<TProps> = (props) => {
                                                 </div>
                                         </div>
                                 </div>
-                                <div className={styles.associatedRow}>
-                                        {/* <div>Связанные товары</div> */}
-                                        <CollectionCard dataName={cardInformation[0].dataName} img={cardInformation[0].img} link='/about' name='Solo' price={234} key='key' />
+                                <div className={styles.associated}>
+                                        <h1>Связанные товары</h1>
+                                        <div className={`${styles.associatedRow} mainMarginBottom`}>
+                                                {cardInformation.slice(0,2).map((card, key) => {
+                                                        return <CollectionCard dataName={card.dataName} img={card.img} link={'/preview/' + (key + 1)} name={card.name} price={card.price} key={key} />
+                                                })}
+                                        </div>
                                 </div>
                         </div>
                 </section>

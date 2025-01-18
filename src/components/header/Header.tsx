@@ -10,7 +10,7 @@ type TProps = {
         burgerState: boolean
 }
 const Header: FC<TProps> = (props) => {
-        const navLinks: string[] = ['/', '/shop', '/about', '/contacts']
+        const navLinks: string[] = ['/womazing', '/shop', '/about', '/contacts']
         const navItems: string[] = ['Главная', 'Магазин', 'О бренде', 'Контакты']
         const [bg, setBg] = useState(false)
         if (window.scrollY < 50 && !bg) {
@@ -27,7 +27,7 @@ const Header: FC<TProps> = (props) => {
                 <header className={styles.header} id={!bg ? styles.white : undefined}>
                         <div className={`container ${styles.headerContainer}`}>
                                 <div className={styles.logo}>
-                                        <Link to={'/home'}>
+                                        <Link to={'/womazing'}>
                                                 <img src={logo} alt='logo' />
                                         </Link>
                                 </div>

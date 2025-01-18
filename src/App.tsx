@@ -29,7 +29,7 @@ function App() {
                                                         <Route path='/womazing' element={<Home />} />
                                                         <Route path='/shop' element={<Shop />} />
                                                         <Route path='/about' element={<About />} />
-                                                        <Route path='/preview/:itemId?' element={<Preview />} />
+                                                        <Route path='/preview/:itemId' element={<Preview />} />
                                                         <Route path='*' element={<NotFound />} />
                                                 </Routes>
                                         </main>
