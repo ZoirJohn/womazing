@@ -34,9 +34,9 @@ const shopReducer = (_state = initialState, action: any): typeof initialState =>
         }
 }
 export const setCurrentPage = (pageNumber: number) => {
-        return { type: 'woma/SET-CURRENT-PAGE', payload: pageNumber }
+        return { type: 'woma/SET-CURRENT-PAGE', payload: pageNumber } as const
 }
 export const setCurrentFilter = (filter: string) => {
-        return { type: 'woma/SET-CURRENT-FILTER', payload: filter }
+        return { type: 'woma/SET-CURRENT-FILTER', payload: filter } as const
 }
 export default shopReducer

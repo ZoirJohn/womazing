@@ -60,6 +60,20 @@
 .nav {
         z-index: 3;
 }
+.cartLink {
+        position: relative;
+}
+.cartNumber {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        top: -75%;
+        right: -75%;
+        border-radius: 50%;
+}
 @media (max-width: 1024px) {
         .headerContainer {
                 padding-top: 25px;

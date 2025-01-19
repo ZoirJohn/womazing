@@ -55,6 +55,24 @@
         display: flex;
         gap: 1em;
 }
+.previewCart {
+        display: flex;
+        gap: 1em;
+}
+.previewNumber {
+        width: 16%;
+        font-size: 20px;
+        padding: 1em 1.2em;
+}
+.previewNumber::-webkit-outer-spin-button,
+.previewNumber::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+}
+.previewNumber[type='number'] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+}
 .colors {
         cursor: pointer;
 }

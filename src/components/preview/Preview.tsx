@@ -1,9 +1,10 @@
-import { FC, useEffect, useState } from 'react'
+import React, { ChangeEvent, FC, useEffect, useState } from 'react'
 import styles from '../../css/preview.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { getCardInformation } from '../../selector'
 import { useLocation } from 'react-router-dom'
 import CollectionCard from '../main/CollectionCard'
+import { setCartItems } from '../../redux/preview-reducer'
 
 type TProps = {}
 
@@ -20,17 +21,17 @@ const Preview: FC<TProps> = (props) => {
         const [activeColor, setColor] = useState<string>('')
         const [activeSize, setSize] = useState<string>('')
         const [orderReady, setOrderReady] = useState<boolean>(false)
+        const [amount, setAmount] = useState('')
 
         const rgb = ['#927876', '#D4D4D4', '#FD9696', '#FDC796']
         const sizes = ['s', 'm', 'l', 'xl']
 
         const order = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
                 e.preventDefault()
-
-                if (activeColor === '' || activeSize === '') {
+                if (activeColor === '' || activeSize === '' || amount === undefined) {
                         setOrderReady(true)
                 } else {
-                        dispatch({ type: '' })
+                        dispatch(setCartItems({ ...cargo, color: activeColor, size: activeSize, amount }))
                 }
         }
         useEffect(() => {
@@ -89,8 +90,14 @@ const Preview: FC<TProps> = (props) => {
                                                                 })}
                                                         </div>
                                                 </div>
-                                                <p className={styles.associatedError}>{orderReady ? 'ПОЖАЛУЙСТА ВЫБЕРИТЕ ЦВЕТ И РАЗМЕР' : ''}</p>
+                                                <p className={styles.associatedError}>{orderReady ? 'ПОЖАЛУЙСТА ВЫБЕРИТЕ ЦВЕТ, РАЗМЕР И КОЛИЧЕСТВО' : ''}</p>
                                                 <div className={styles.previewCart}>
+                                                        <input
+                                                                type='number'
+                                                                className={styles.previewNumber}
+                                                                value={amount}
+                                                                onChange={(e: ChangeEvent<HTMLInputElement>) => setAmount(e.target.value)}
+                                                        />
                                                         <a href='' className='primaryButton' onClick={(e) => order(e)}>
                                                                 Добавить в корзину
                                                         </a>

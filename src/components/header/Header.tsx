@@ -4,6 +4,8 @@ import { NavLink, Link } from 'react-router-dom'
 import { FiPhoneCall } from 'react-icons/fi'
 import { IoBagHandleOutline } from 'react-icons/io5'
 import logo from '../../images/logo.svg'
+import { useSelector } from 'react-redux'
+import { getCartItems } from '../../selector'
 
 type TProps = {
         setBurgerState: (b: boolean) => void
@@ -12,6 +14,7 @@ type TProps = {
 const Header: FC<TProps> = (props) => {
         const navLinks: string[] = ['/womazing', '/shop', '/about', '/contacts']
         const navItems: string[] = ['Главная', 'Магазин', 'О бренде', 'Контакты']
+        const cartItems = useSelector(getCartItems)
         const [bg, setBg] = useState(false)
         if (window.scrollY < 50 && !bg) {
                 setBg(true)
@@ -48,6 +51,7 @@ const Header: FC<TProps> = (props) => {
                                                 </span>
                                                 <Link to='/cart' className={styles.cartLink}>
                                                         <IoBagHandleOutline />
+                                                        <i className={styles.cartNumber}> {cartItems.length}</i>
                                                 </Link>
                                         </p>
                                         <a

@@ -18,3 +18,6 @@ export const getCurrentFilter = (state: RootState) => {
 export const getFilterNames = (state: RootState) => {
         return state.shop.filterNames
 }
+export const getCartItems = (state: RootState) => {
+        return state.preview.cart
+}
