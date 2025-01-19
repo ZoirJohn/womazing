@@ -9,7 +9,7 @@ import visa from '../../images/visa.png'
 
 type TProps = {}
 const Footer: FC<TProps> = (props) => {
-        const navLinks: string[] = ['/', '/shop', '/about', '/contacts']
+        const navLinks: string[] = ['/womazing', '/shop', '/about', '/contacts']
         const navItems: string[] = ['Главная', 'Магазин', 'О бренде', 'Контакты']
         const copyFunction = (e: any) => {
                 navigator.clipboard.writeText(e.target.innerText)

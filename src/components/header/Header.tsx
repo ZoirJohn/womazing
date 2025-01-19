@@ -51,7 +51,7 @@ const Header: FC<TProps> = (props) => {
                                                 </span>
                                                 <Link to='/cart' className={styles.cartLink}>
                                                         <IoBagHandleOutline />
-                                                        <i className={styles.cartNumber}> {cartItems.length}</i>
+                                                        <i className={styles.cartNumber}> {cartItems.length || ''}</i>
                                                 </Link>
                                         </p>
                                         <a
