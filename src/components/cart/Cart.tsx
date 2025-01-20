@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import styles from '../../css/cart.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { getCartItems } from '../../selector'
@@ -16,7 +16,7 @@ const Cart: FC<TProps> = (props) => {
         const cancelOrder = (item: TItem) => {
                 dispatch(deleteCartItems(item))
         }
-        const changeAmount = () => {}
+        let overallPrice = cartItem.reduce((total, item) => total + item.price * item.amount, 0)
         return (
                 <section className={styles.cart}>
                         <div className={`${styles.cartContainer} container`}>
@@ -43,23 +43,24 @@ const Cart: FC<TProps> = (props) => {
                                                                                 <img src={item.img} alt='' />
                                                                                 <h6 className={styles.cartOrder__name}>{item.name}</h6>
                                                                         </div>
-                                                                        <h6 className={styles.cartOrder__price}>${item.price}</h6>      
+                                                                        <h6 className={styles.cartOrder__price}>${item.price}</h6>
                                                                         <input className={styles.cartOrder__amount} type='number' value={item.amount} onChange={() => {}} />
-                                                                        <h6 className={styles.cartOrder__overall}>{item.price * item.amount}</h6>
+                                                                        <h6 className={styles.cartOrder__overall}>${item.price * item.amount}</h6>
                                                                 </>
                                                         )
                                                 })}
                                         </div>
                                         <div className={styles.cartItemCoupon}>
-                                                <input type='text' className={styles.cartCoupon} />
-                                                <a href='' className='secondaryButton'>
+                                                <input type='text' className={styles.cartCoupon} placeholder='Введите купон' />
+                                                <a href='' className={`${styles.useCoupon} secondaryButton`}>
                                                         Применить купон
                                                 </a>
-                                                <a href='' className='secondaryButton'>
+                                                <a href='' className={`${styles.refreshCart} secondaryButton`}>
                                                         Обновить корзину
                                                 </a>
                                         </div>
                                 </div>
+                                <div className={styles.cartItemOverall}>Подытог: ${overallPrice}</div>
                         </div>
                 </section>
         )
