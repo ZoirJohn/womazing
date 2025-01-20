@@ -16,7 +16,7 @@ let initialState = {
                 { name: 'Футболка USA', price: 129, img: img1, dataName: 'футболки' },
                 { name: 'Купальник Glow', price: 129, img: img2, dataName: 'купальники' },
                 { name: 'Свитшот Sweet Shot', price: 129, img: img3, dataName: 'свитшоты' },
-        ],
+        ] as Array<{ name: string; price: number; img: string; dataName: string }>,
         currentPage: 1 as number,
         currentFilter: 'все' as string,
         filterNames: ['все', 'свитшоты', 'футболки', 'купальники', 'кардиганы'],

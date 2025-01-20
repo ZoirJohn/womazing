@@ -31,7 +31,7 @@ const Preview: FC<TProps> = (props) => {
                 if (activeColor === '' || activeSize === '' || amount === undefined) {
                         setOrderReady(true)
                 } else {
-                        dispatch(setCartItems({ ...cargo, color: activeColor, size: activeSize, amount }))
+                        dispatch(setCartItems({ ...cargo, color: activeColor, size: activeSize, amount: +amount }))
                 }
         }
         useEffect(() => {
