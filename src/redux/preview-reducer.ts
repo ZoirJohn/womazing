@@ -1,10 +1,7 @@
 import { TItem } from '../types'
 
 let initialState = {
-        cart: [
-                { amount: 2, color: '#FD9696', dataName: 'купальники', img: '/womazing/static/media/card-2.5b4ddbd414f09b723485.png', name: 'Купальник Glow', price: 129, size: 's' },
-                { amount: 2, color: '#FD9696', dataName: 'купальники', img: '/womazing/static/media/card-2.5b4ddbd414f09b723485.png', name: 'Купальник Glow', price: 129, size: 's' },
-        ] as Array<TItem>,
+        cart: [] as Array<TItem>,
         price: 0,
 }
 
@@ -14,7 +11,6 @@ const previewReducer = (_state = initialState, action: any): typeof initialState
                         return { ..._state, cart: [..._state.cart, { ...action.payload }] }
                 case 'woma/DELETE-CART-ITEM':
                         return { ..._state, cart: [..._state.cart.filter((item) => item !== action.payload)] }
-              
 
                 default:
                         return _state

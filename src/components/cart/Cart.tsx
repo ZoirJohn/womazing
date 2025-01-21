@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react'
+import { FC, useState } from 'react'
 import styles from '../../css/cart.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { getCartItems } from '../../selector'
@@ -37,7 +37,7 @@ const Cart: FC<TProps> = (props) => {
                                         <div className={styles.cartOrder}>
                                                 {cartItem.map((item, key) => {
                                                         return (
-                                                                <>
+                                                                <div className={styles.orderItself} key={key}>
                                                                         <div className={styles.orderPreview} key={key}>
                                                                                 <div className={styles.orderCancel} onClick={() => cancelOrder(item)}></div>
                                                                                 <img src={item.img} alt='' />
@@ -46,7 +46,7 @@ const Cart: FC<TProps> = (props) => {
                                                                         <h6 className={styles.cartOrder__price}>${item.price}</h6>
                                                                         <input className={styles.cartOrder__amount} type='number' value={item.amount} onChange={() => {}} />
                                                                         <h6 className={styles.cartOrder__overall}>${item.price * item.amount}</h6>
-                                                                </>
+                                                                </div>
                                                         )
                                                 })}
                                         </div>
@@ -60,7 +60,12 @@ const Cart: FC<TProps> = (props) => {
                                                 </a>
                                         </div>
                                 </div>
-                                <div className={styles.cartItemOverall}>Подытог: ${overallPrice}</div>
+                                <div className={styles.cartItemOverall}>
+                                        <p>
+                                                <span>Итого:</span> ${overallPrice}
+                                        </p>{' '}
+                                        <a className={`primaryButton`}>Оформить заказ</a>
+                                </div>
                         </div>
                 </section>
         )

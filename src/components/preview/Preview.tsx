@@ -28,17 +28,20 @@ const Preview: FC<TProps> = (props) => {
 
         const order = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
                 e.preventDefault()
-                if (activeColor === '' || activeSize === '' || amount === undefined) {
+                if (activeColor === '' || activeSize === '' || amount === '') {
                         setOrderReady(true)
                 } else {
                         dispatch(setCartItems({ ...cargo, color: activeColor, size: activeSize, amount: +amount }))
+                        setColor('')
+                        setSize('')
+                        setAmount('')
                 }
         }
         useEffect(() => {
-                if (activeColor !== '' && activeSize !== '') {
+                if (activeColor !== '' && activeSize !== '' && amount !== '') {
                         setOrderReady(false)
                 }
-        }, [activeColor, activeSize])
+        }, [activeColor, activeSize,amount])
         return (
                 <section className={styles.preview}>
                         <div className={`${styles.previewContainer} container`}>

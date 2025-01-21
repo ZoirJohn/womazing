@@ -170,6 +170,14 @@ main {
                 --swiper-navigation-sides-offset: 0;
                 --swiper-pagination-bottom: 3em;
         }
+        .primaryButton {
+                padding: 1em 2em;
+                text-align: center;
+        }
+        .secondaryButton {
+                padding: 1em 2em;
+                text-align: center;
+        }
 }
 @media (max-width: 425px) {
         :root {

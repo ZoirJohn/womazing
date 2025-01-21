@@ -57,12 +57,14 @@
 }
 .previewCart {
         display: flex;
+        align-items: center;
+        flex-wrap: wrap;
         gap: 1em;
 }
 .previewNumber {
         width: 16%;
         font-size: 20px;
-        padding: 1em 1.2em;
+        padding: 1em;
 }
 .previewNumber::-webkit-outer-spin-button,
 .previewNumber::-webkit-inner-spin-button {
@@ -117,9 +119,27 @@
         }
         .previewPage {
                 flex-direction: column;
+                align-items: center;
                 gap: 2.5em;
         }
         .previewImage {
                 width: 80%;
+        }
+        .previewDesciption {
+                align-items: center;
+        }
+        .previewCart {
+                justify-content: center;
+        }
+        .previewNumber {
+                width: 25%;
+                padding-right: 1em;
+                padding-left: 1em;
+        }
+}
+@media (max-width: 410px) {
+        .associatedError {
+                top: 65%;
+                text-wrap: wrap;
         }
 }
