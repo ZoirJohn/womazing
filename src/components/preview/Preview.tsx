@@ -8,6 +8,8 @@ import { setCartItems } from '../../redux/preview-reducer'
 
 type TProps = {}
 
+const idCreator = new Date()
+
 const Preview: FC<TProps> = (props) => {
         const main = 'Главная'
         const current = 'Свитшот Sweet Shot'
@@ -31,7 +33,7 @@ const Preview: FC<TProps> = (props) => {
                 if (activeColor === '' || activeSize === '' || amount === '') {
                         setOrderReady(true)
                 } else {
-                        dispatch(setCartItems({ ...cargo, color: activeColor, size: activeSize, amount: +amount }))
+                        dispatch(setCartItems({ ...cargo, color: activeColor, size: activeSize, amount: +amount, id: idCreator.getMilliseconds() }))
                         setColor('')
                         setSize('')
                         setAmount('')

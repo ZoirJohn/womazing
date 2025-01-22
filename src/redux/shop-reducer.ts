@@ -1,8 +1,9 @@
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import img1 from '../images/card-1.png'
 import img2 from '../images/card-2.png'
 import img3 from '../images/card-3.png'
 
-let initialState = {
+const initialState = {
         cardInformation: [
                 { name: 'Футболка USA', price: 129, img: img1, dataName: 'футболки' },
                 { name: 'Купальник Glow', price: 129, img: img2, dataName: 'купальники' },
@@ -21,22 +22,19 @@ let initialState = {
         currentFilter: 'все' as string,
         filterNames: ['все', 'свитшоты', 'футболки', 'купальники', 'кардиганы'],
 }
+const shopSlice = createSlice({
+        name: 'shop',
+        initialState,
+        reducers: {
+                setCurrentPage: (state, action: PayloadAction<number>) => {
+                        state.currentPage = action.payload
+                },
+                setCurrentFilter: (state, action: PayloadAction<string>) => {
+                        state.currentFilter = action.payload
+                },
+        },
+})
 
-const shopReducer = (_state = initialState, action: any): typeof initialState => {
-        switch (action.type) {
-                case 'woma/SET-CURRENT-PAGE':
-                        return { ..._state, currentPage: action.payload }
-                case 'woma/SET-CURRENT-FILTER':
-                        return { ..._state, currentFilter: action.payload }
+export const { setCurrentPage, setCurrentFilter } = shopSlice.actions
 
-                default:
-                        return _state
-        }
-}
-export const setCurrentPage = (pageNumber: number) => {
-        return { type: 'woma/SET-CURRENT-PAGE', payload: pageNumber } as const
-}
-export const setCurrentFilter = (filter: string) => {
-        return { type: 'woma/SET-CURRENT-FILTER', payload: filter } as const
-}
-export default shopReducer
+export default shopSlice.reducer

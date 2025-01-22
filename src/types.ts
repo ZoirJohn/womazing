@@ -6,4 +6,5 @@ export type TItem = {
         color: string
         size: string
         amount: number
+        id: number
 }

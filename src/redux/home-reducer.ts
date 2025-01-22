@@ -1,16 +1,14 @@
-let initialState = {
-        homeHeader: 'Новые поступления в этом сезоне' as string,
-        homeParagraph: 'Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне. Время исследовать.' as string,
-}
-const homeReducer = (_state = initialState, action: any) => {
-        // switch (action.type) {
-        //         case value:
+import { createSlice } from '@reduxjs/toolkit'
 
-        //                 break;
-
-        //         default:
-        //                 break;
-        // }
-        return _state
+const initialState = {
+        homeHeader: 'Новые поступления в этом сезоне',
+        homeParagraph: 'Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне. Время исследовать.',
 }
-export default homeReducer
+
+const homeSlice = createSlice({
+        name: 'home',
+        initialState,
+        reducers: {},
+})
+
+export default homeSlice.reducer
