@@ -41,7 +41,7 @@ const Preview: FC<TProps> = (props) => {
                 if (activeColor !== '' && activeSize !== '' && amount !== '') {
                         setOrderReady(false)
                 }
-        }, [activeColor, activeSize,amount])
+        }, [activeColor, activeSize, amount])
         return (
                 <section className={styles.preview}>
                         <div className={`${styles.previewContainer} container`}>

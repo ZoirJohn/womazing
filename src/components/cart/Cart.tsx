@@ -10,7 +10,6 @@ type TProps = {}
 const Cart: FC<TProps> = (props) => {
         const main = 'Главная'
         const current = 'Корзина'
-        const [a, changeA] = useState()
         const dispatch = useDispatch()
         const cartItem = useSelector(getCartItems)
         const cancelOrder = (item: TItem) => {
