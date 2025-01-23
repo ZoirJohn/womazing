@@ -92,6 +92,7 @@ main {
         transition: var(--transition);
         display: inline-block;
         text-wrap: nowrap;
+        border: none;
 }
 .secondaryButton {
         font-size: 17px;
