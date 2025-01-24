@@ -1,21 +1,13 @@
 import { FC, useEffect } from 'react'
 import styles from '../../css/contacts.module.css'
+import PageNav from '../../assets/PageNav'
 type TProps = {}
 
 const Contacts: FC = (props) => {
-        const main = 'Главная'
-        const current = 'Контакты'
-
         return (
                 <section className={styles.contacts}>
                         <div className='container'>
-                                <div className={'pageNavigation'}>
-                                        <h1 className={'pageHeader'}>Контакты</h1>
-                                        <div className={'breadcrumb'}>
-                                                {main}
-                                                <span className={'breadcrumbCurrent'}>{current}</span>
-                                        </div>
-                                </div>
+                                <PageNav header='Контакты' current='Контакты' key={''} />
                                 <iframe className={styles.contacts__map} src='https://api.maptiler.com/maps/basic-v2/?key=TwGsHnCIEoq1cQrfNuP4#-0.2/0.60986/7.51010'></iframe>
                                 <div className={styles.contacts__info}>
                                         <div className={styles.contactPhone}>
@@ -31,7 +23,7 @@ const Contacts: FC = (props) => {
                                                 <p>г. Москва, 3-я улица Строителей, 25</p>
                                         </div>
                                 </div>
-                                <form action='#' className={styles.contactsForm}>
+                                <form action='#' className={styles.contactsForm} onSubmit={(e) => e.preventDefault()}>
                                         <caption>Напишите нам</caption>
                                         <input type='text' name='' id='' placeholder='Имя' />
                                         <input type='email' name='' id='' placeholder='E-mail' />

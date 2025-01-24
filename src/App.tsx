@@ -12,6 +12,7 @@ import About from './components/about/About'
 import Preview from './components/preview/Preview'
 import Cart from './components/cart/Cart'
 import Contacts from './components/contacts/Contacts'
+import Checkout from './components/checkout/Checkout'
 
 function App() {
         const [burgerState, setBurgerState] = useState(false)
@@ -28,11 +29,12 @@ function App() {
                                         <Header setBurgerState={setBurgerState} burgerState={burgerState} />
                                         <main>
                                                 <Routes>
-                                                        <Route path='/womazing' element={<Home />} />
+                                                        <Route path='/' element={<Home />} />
                                                         <Route path='/shop' element={<Shop />} />
                                                         <Route path='/about' element={<About />} />
                                                         <Route path='/contacts' element={<Contacts />} />
                                                         <Route path='/cart' element={<Cart />} />
+                                                        <Route path='/checkout' element={<Checkout />} />
                                                         <Route path='/preview/:itemId' element={<Preview />} />
                                                         <Route path='*' element={<NotFound />} />
                                                 </Routes>

@@ -5,16 +5,13 @@ import { getCardInformation } from '../../selector'
 import { useLocation } from 'react-router-dom'
 import CollectionCard from '../main/CollectionCard'
 import { setCartItems } from '../../redux/preview-reducer'
+import PageNav from '../../assets/PageNav'
 
 type TProps = {}
 
 const idCreator = new Date()
 
 const Preview: FC<TProps> = (props) => {
-        const main = 'Главная'
-        const current = 'Свитшот Sweet Shot'
-        const cargoName = 'Свитшоты'
-
         const dispatch = useDispatch()
 
         const cardInformation = useSelector(getCardInformation)
@@ -47,14 +44,7 @@ const Preview: FC<TProps> = (props) => {
         return (
                 <section className={styles.preview}>
                         <div className={`${styles.previewContainer} container`}>
-                                <div className={'pageNavigation'}>
-                                        <h1 className={'pageHeader'}>Свитшот Sweet Shot</h1>
-                                        <div className={'breadcrumb'}>
-                                                {main}
-                                                <span className={'breadcrumbCargo'}>{cargoName}</span>
-                                                <span className={'breadcrumbCurrent'}>{current}</span>
-                                        </div>
-                                </div>
+                                <PageNav header='Свитшот Sweet Shot' current='Свитшот Sweet Shot' />
                                 <div className={`${styles.previewPage} mainMarginBottom`}>
                                         <div className={styles.previewImage}>
                                                 <img src={cargo.img} alt='image' />

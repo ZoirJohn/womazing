@@ -93,6 +93,7 @@ main {
         display: inline-block;
         text-wrap: nowrap;
         border: none;
+        cursor: pointer;
 }
 .secondaryButton {
         font-size: 17px;

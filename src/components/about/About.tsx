@@ -3,22 +3,15 @@ import styles from '../../css/about.module.css'
 import about1 from '../../images/aboutFirst.png'
 import about2 from '../../images/aboutTwo.png'
 import { Link } from 'react-router-dom'
+import PageNav from '../../assets/PageNav'
 
 type TProps = {}
 
 const About: FC<TProps> = (props) => {
-        const main = 'Главная'
-        const current = 'О бренде'
         return (
                 <section className={styles.about}>
                         <div className={`${styles.shopContainer} container`}>
-                                <div className={'pageNavigation'}>
-                                        <h1 className={'pageHeader'}>Магазин</h1>
-                                        <div className={'breadcrumb'}>
-                                                {main}
-                                                <span className={'breadcrumbCurrent'}>{current}</span>
-                                        </div>
-                                </div>
+                                <PageNav header='О бренде' current='О бренде' key={''} />
                                 <div className={styles.aboutRow}>
                                         <div className={styles.aboutPrincipals}>
                                                 <img src={about1} alt='' />

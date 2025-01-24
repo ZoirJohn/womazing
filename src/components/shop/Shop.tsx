@@ -7,6 +7,7 @@ import { getCardInformation, getFilterNames, getCurrentFilter } from '../../sele
 import { setCurrentFilter, setCurrentPage } from '../../redux/shop-reducer'
 import { getCurrentPage } from '../../selector'
 import Filter from '../../assets/Filter'
+import PageNav from '../../assets/PageNav'
 
 type TProps = {}
 const Shop: FC<TProps> = (props) => {
@@ -21,18 +22,10 @@ const Shop: FC<TProps> = (props) => {
         const handleFilter = (filter: string) => {
                 dispatch(setCurrentFilter(filter))
         }
-        const main = 'Главная'
-        const current = 'Магазин'
         return (
                 <section className={styles.shop}>
                         <div className={`${styles.shopContainer} container`}>
-                                <div className={'pageNavigation'}>
-                                        <h1 className={'pageHeader'}>Магазин</h1>
-                                        <div className={'breadcrumb'}>
-                                                {main}
-                                                <span className={'breadcrumbCurrent'}>{current}</span>
-                                        </div>
-                                </div>
+                                <PageNav header='Магазин' current='Магазин' />
                                 <Filter filterNames={filterNames} onPageChange={handleFilter} />
                                 <p className={styles.cardDetails}>
                                         Показано:{' '}
