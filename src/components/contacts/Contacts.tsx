@@ -1,6 +1,8 @@
-import { FC, useEffect } from 'react'
+import { FC } from 'react'
 import styles from '../../css/contacts.module.css'
 import PageNav from '../../assets/PageNav'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+
 type TProps = {}
 
 const Contacts: FC = (props) => {
@@ -23,14 +25,44 @@ const Contacts: FC = (props) => {
                                                 <p>г. Москва, 3-я улица Строителей, 25</p>
                                         </div>
                                 </div>
-                                <form action='#' className={styles.contactsForm} onSubmit={(e) => e.preventDefault()}>
-                                        <caption>Напишите нам</caption>
-                                        <input type='text' name='' id='' placeholder='Имя' />
-                                        <input type='email' name='' id='' placeholder='E-mail' />
-                                        <input type='number' name='' id='' placeholder='Телефон' />
-                                        <textarea name='' id='' placeholder='Сообщение'></textarea>
-                                        <button className='primaryButton'>Отправить</button>
-                                </form>
+                                <Formik
+                                        initialValues={{ name: '', email: '', telephone: '', text: '' }}
+                                        onSubmit={(values) => console.log(values)}
+                                        validate={(values) => {
+                                                const errors = {} as { name: string; email: string; telephone: string }
+                                                if (values.name === '') {
+                                                        errors.name = 'Required'
+                                                }
+                                                if (values.email === '') {
+                                                        errors.email = 'Required'
+                                                }
+                                                if (values.telephone === '') {
+                                                        errors.telephone = 'Required'
+                                                }
+
+                                                return errors
+                                        }}
+                                >
+                                        {({ isSubmitting }) => (
+                                                <Form className={styles.contactsForm}>
+                                                        <p>Напишите нам</p>
+                                                        <Field type='text' name='name' placeholder='Имя' />
+                                                        <ErrorMessage name='name' component='div' />
+
+                                                        <Field type='email' name='email' placeholder='E-mail' />
+                                                        <ErrorMessage name='email' component='div' />
+
+                                                        <Field type='tel' name='telephone' placeholder='Телефон' />
+                                                        <ErrorMessage name='telephone' component='div' />
+
+                                                        <Field component={'textarea'} type='text' name='textarea' placeholder='Сообщение' className={styles.textarea} required/>
+
+                                                        <button className='primaryButton' type='submit' disabled={isSubmitting}>
+                                                                Отправить
+                                                        </button>
+                                                </Form>
+                                        )}
+                                </Formik>
                         </div>
                 </section>
         )
