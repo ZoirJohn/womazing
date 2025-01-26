@@ -3,17 +3,7 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import { TItem } from '../types'
 
 const initialState = {
-        cart: [
-                {
-                        amount: 2,
-                        color: '#FD9696',
-                        dataName: 'купальники',
-                        img: '/womazing/static/media/card-2.5b4ddbd414f09b723485.png',
-                        name: 'Купальник Glow',
-                        price: 129,
-                        size: 's',
-                },
-        ] as Array<TItem>,
+        cart: [] as Array<TItem>,
         price: 0,
 }
 

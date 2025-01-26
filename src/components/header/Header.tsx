@@ -12,7 +12,7 @@ type TProps = {
         burgerState: boolean
 }
 const Header: FC<TProps> = (props) => {
-        const navLinks: string[] = ['/', '/shop', '/about', '/contacts']
+        const navLinks: string[] = ['/womazing', '/shop', '/about', '/contacts']
         const navItems: string[] = ['Главная', 'Магазин', 'О бренде', 'Контакты']
         const cartItems = useSelector(getCartItems)
         const [bg, setBg] = useState(false)
@@ -30,7 +30,7 @@ const Header: FC<TProps> = (props) => {
                 <header className={styles.header} id={!bg ? styles.white : undefined}>
                         <div className={`container ${styles.headerContainer}`}>
                                 <div className={styles.logo}>
-                                        <Link to={'/'}>
+                                        <Link to={'/womazing'}>
                                                 <img src={logo} alt='logo' />
                                         </Link>
                                 </div>
