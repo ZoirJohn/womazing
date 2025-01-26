@@ -9,7 +9,7 @@ import visa from '../../images/visa.png'
 
 type TProps = {}
 const Footer: FC<TProps> = (props) => {
-        const navLinks: string[] = ['/womazing', '/shop', '/about', '/contacts']
+        const navLinks: string[] = ['/', '/shop', '/about', '/contacts']
         const navItems: string[] = ['Главная', 'Магазин', 'О бренде', 'Контакты']
         const copyFunction = (e: any) => {
                 navigator.clipboard.writeText(e.target.innerText)
@@ -19,7 +19,7 @@ const Footer: FC<TProps> = (props) => {
                 <footer className={`${styles.footer} mainMarginTop`}>
                         <div className={`container ${styles.footerContainer}`}>
                                 <div className={styles.logo}>
-                                        <Link to={'/womazing'}>
+                                        <Link to={'/'}>
                                                 <img src={logo} alt='logo' />
                                         </Link>
                                 </div>

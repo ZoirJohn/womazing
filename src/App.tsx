@@ -25,11 +25,11 @@ function App() {
         return (
                 <div id='root'>
                         <Provider store={store}>
-                                <BrowserRouter>
+                                <BrowserRouter basename='/womazing'>
                                         <Header setBurgerState={setBurgerState} burgerState={burgerState} />
                                         <main>
                                                 <Routes>
-                                                        <Route path='/womazing' element={<Home />} />
+                                                        <Route path='/' element={<Home />} />
                                                         <Route path='/shop' element={<Shop />} />
                                                         <Route path='/about' element={<About />} />
                                                         <Route path='/contacts' element={<Contacts />} />

@@ -35,7 +35,6 @@ const Contacts: FC = (props) => {
                                         initialValues={{ name: '', email: '', telephone: '', text: '' }}
                                         onSubmit={(values) => {
                                                 setSuccess(true)
-                                                console.log(values)
                                         }}
                                         validate={(values) => {
                                                 const errors = {} as { name: string; email: string; telephone: string }
