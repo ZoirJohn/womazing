@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 import styles from '../../css/contacts.module.css'
 import PageNav from '../../assets/PageNav'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
@@ -6,6 +6,12 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 type TProps = {}
 
 const Contacts: FC = (props) => {
+        const [success, setSuccess] = useState<boolean>()
+        useEffect(() => {
+                setTimeout(() => {
+                        setSuccess(false)
+                }, 1000)
+        }, [success])
         return (
                 <section className={styles.contacts}>
                         <div className='container'>
@@ -27,7 +33,10 @@ const Contacts: FC = (props) => {
                                 </div>
                                 <Formik
                                         initialValues={{ name: '', email: '', telephone: '', text: '' }}
-                                        onSubmit={(values) => console.log(values)}
+                                        onSubmit={(values) => {
+                                                setSuccess(true)
+                                                console.log(values)
+                                        }}
                                         validate={(values) => {
                                                 const errors = {} as { name: string; email: string; telephone: string }
                                                 if (values.name === '') {
@@ -55,11 +64,12 @@ const Contacts: FC = (props) => {
                                                         <Field type='tel' name='telephone' placeholder='Телефон' />
                                                         <ErrorMessage name='telephone' component='div' />
 
-                                                        <Field component={'textarea'} type='text' name='textarea' placeholder='Сообщение' className={styles.textarea} required/>
+                                                        <Field component={'textarea'} type='text' name='textarea' placeholder='Сообщение' className={styles.textarea} required />
 
                                                         <button className='primaryButton' type='submit' disabled={isSubmitting}>
                                                                 Отправить
                                                         </button>
+                                                        {success && 'OOOPS'}
                                                 </Form>
                                         )}
                                 </Formik>
