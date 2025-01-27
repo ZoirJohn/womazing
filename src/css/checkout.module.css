@@ -3,10 +3,9 @@
 }
 .checkoutForm {
         display: flex;
-        /* align-items: start; */
         justify-content: space-between;
 }
-.checkoutForm .checkoutFields {
+.checkoutFields {
         max-width: 450px;
         display: flex;
         flex-direction: column;
@@ -27,7 +26,7 @@
         font-weight: 500;
         color: #f00;
 }
-.checkoutForm input,
+.checkoutFields input,
 select {
         max-width: 350px;
         min-width: 300px;
@@ -87,64 +86,52 @@ select {
         grid-column: 1/3;
         margin: 0 0 1.8em;
 }
-.checkoutDataPayment input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-}
 
-.checkoutDataLabel {
-        display: block;
-        position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
-        cursor: pointer;
-        font-size: 22px;
-        user-select: none;
-}
 .checkoutDataLabel input {
+        appearance: none;
         position: absolute;
         opacity: 0;
+}
+.checkoutDataLabel {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
         cursor: pointer;
-        height: 0;
-        width: 0;
+        padding: 3em 0;
+        font-size: 17px;
+        font-weight: 500;
 }
 .checkmark {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        background-color: #fff;
+        border: 1px solid #000;
+        transition: background-color 0.3s, border-color 0.3s;
+        position: relative;
 }
-.checkoutDataLabel:hover input ~ .checkmark {
-        background-color: #ccc;
-}
-.checkoutDataLabel input:checked ~ .checkmark {
-        background-color: #2196f3;
-}
-.checkoutDataLabel:after {
+.checkoutDataLabel input:checked + .checkmark::after {
         content: '';
-        position: absolute;
-        display: none;
-}
-.checkoutDataLabel input:checked ~ .checkmark:after {
-        display: block;
-}
-.checkoutDataLabel .checkmark:after {
-        left: 9px;
-        top: 5px;
-        width: 5px;
+        background: #000;
+        width: 10px;
         height: 10px;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
 }
 
+@media (max-width: 768px) {
+        .checkoutForm {
+                flex-direction: column;
+                gap: 4em 0;
+        }
+        .checkoutData{
+                gap: 4em 0;
+        }
+}
 @media (max-width: 375px) {
         .checkoutForm textarea {
                 max-width: 300px;

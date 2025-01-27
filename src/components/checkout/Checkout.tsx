@@ -120,11 +120,10 @@ const Checkout: FC<TProps> = (props) => {
                                                                                 <div className={styles.checkoutDataPayment}>
                                                                                         <p>Способ оплаты</p>
                                                                                         <label htmlFor='cash' className={styles.checkoutDataLabel}>
+                                                                                                <Field type='checkbox' name='cash' id='cash' />
+                                                                                                <span className={styles.checkmark}></span>
                                                                                                 Оплата наличными
-                                                                                                {/* <Field type='checkbox' name='cash' /> */}
-                                                                                                <input type="checkbox" name="" id="" />
                                                                                         </label>
-                                                                                        <span className={styles.checkmark}></span>
                                                                                         <button className='primaryButton'>Разместить заказ</button>
                                                                                 </div>
                                                                         </div>
