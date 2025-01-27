@@ -55,13 +55,13 @@ const Contacts: FC = (props) => {
                                                 <Form className={styles.contactsForm}>
                                                         <p>Напишите нам</p>
                                                         <Field type='text' name='name' placeholder='Имя' />
-                                                        <ErrorMessage name='name' component='div' />
+                                                        <ErrorMessage className={styles.contactsError} name='name' component='div' />
 
                                                         <Field type='email' name='email' placeholder='E-mail' />
-                                                        <ErrorMessage name='email' component='div' />
+                                                        <ErrorMessage className={styles.contactsError} name='email' component='div' />
 
                                                         <Field type='tel' name='telephone' placeholder='Телефон' />
-                                                        <ErrorMessage name='telephone' component='div' />
+                                                        <ErrorMessage className={styles.contactsError} name='telephone' component='div' />
 
                                                         <Field component={'textarea'} type='text' name='textarea' placeholder='Сообщение' className={styles.textarea} required />
 

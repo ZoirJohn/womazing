@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { TItem } from '../types'
+import img1 from '../images/card-1.png'
 
 const initialState = {
-        cart: [] as Array<TItem>,
+        cart: [{ name: 'Футболка USA', price: 129, img: img1, dataName: 'футболки', color: 'red', size: 'xl', amount: 2, id: 123 }] as Array<TItem>,
         price: 0,
 }
 

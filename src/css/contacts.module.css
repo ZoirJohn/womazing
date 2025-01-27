@@ -56,6 +56,10 @@
         font-weight: 500;
         font-size: 17px;
 }
+.contactsError {
+        font-weight: 500;
+        color: #f00;
+}
 @media (max-width: 768px) {
         .contacts__map,
         .contacts__info {
