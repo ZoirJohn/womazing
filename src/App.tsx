@@ -16,8 +16,9 @@ import Checkout from './components/checkout/Checkout'
 
 function App() {
         const [burgerState, setBurgerState] = useState(false)
+        const [popup, callPopup] = useState(false)
         const body = document.getElementsByTagName('body')
-        if (burgerState) {
+        if (burgerState || popup) {
                 body[0].className = 'active'
         } else {
                 body[0].className = ''
@@ -26,7 +27,7 @@ function App() {
                 <div id='root'>
                         <Provider store={store}>
                                 <BrowserRouter basename='/womazing'>
-                                        <Header setBurgerState={setBurgerState} burgerState={burgerState} />
+                                        <Header setBurgerState={setBurgerState} burgerState={burgerState} popup={popup} callPopup={callPopup} />
                                         <main>
                                                 <Routes>
                                                         <Route path='/' element={<Home />} />

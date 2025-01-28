@@ -37,28 +37,28 @@ const Checkout: FC<TProps> = (props) => {
                                                                 comment: string
                                                         }
                                                         if (values.name === '') {
-                                                                errors.name = 'Required'
+                                                                errors.name = 'Обязательно'
                                                         }
                                                         if (values.email === '') {
-                                                                errors.email = 'Required'
+                                                                errors.email = 'Обязательно'
                                                         }
                                                         if (values.telephone === '') {
-                                                                errors.telephone = 'Required'
+                                                                errors.telephone = 'Обязательно'
                                                         }
                                                         if (values.country === '') {
-                                                                errors.country = 'Required'
+                                                                errors.country = 'Обязательно'
                                                         }
                                                         if (values.city === '') {
-                                                                errors.city = 'Required'
+                                                                errors.city = 'Обязательно'
                                                         }
                                                         if (values.street === '') {
-                                                                errors.street = 'Required'
+                                                                errors.street = 'Обязательно'
                                                         }
                                                         if (values.house === '') {
-                                                                errors.house = 'Required'
+                                                                errors.house = 'Обязательно'
                                                         }
                                                         if (values.apartment === '') {
-                                                                errors.apartment = 'Required'
+                                                                errors.apartment = 'Обязательно'
                                                         }
                                                         return errors
                                                 }}

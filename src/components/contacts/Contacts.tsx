@@ -39,13 +39,13 @@ const Contacts: FC = (props) => {
                                         validate={(values) => {
                                                 const errors = {} as { name: string; email: string; telephone: string }
                                                 if (values.name === '') {
-                                                        errors.name = 'Required'
+                                                        errors.name = 'Обязательно'
                                                 }
                                                 if (values.email === '') {
-                                                        errors.email = 'Required'
+                                                        errors.email = 'Обязательно'
                                                 }
                                                 if (values.telephone === '') {
-                                                        errors.telephone = 'Required'
+                                                        errors.telephone = 'Обязательно'
                                                 }
 
                                                 return errors
