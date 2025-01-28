@@ -6,6 +6,7 @@ import { IoBagHandleOutline } from 'react-icons/io5'
 import logo from '../../images/logo.svg'
 import { useSelector } from 'react-redux'
 import { getCartItems } from '../../selector'
+import { Field, Formik } from 'formik'
 
 type TProps = {
         setBurgerState: (b: boolean) => void
@@ -63,6 +64,20 @@ const Header: FC<TProps> = (props) => {
                                                 <span></span>
                                         </a>
                                 </div>
+                        </div>
+                        <div className={styles.contactPopup}>
+                                <Formik initialValues={{ name: '', email: '', phone: '' }} onSubmit={() => {}}>
+                                        <form>
+                                                <h1>Заказать обратный звонок</h1>
+                                                <Field type='text' name='name' placeholder='Имя' />
+                                                <Field type='text' name='name' placeholder='E-mail' />
+                                                <Field type='text' name='name' placeholder='Телефон' />
+                                                <button type='submit' className='primaryButton'>
+                                                        Заказать звонок
+                                                </button>
+                                                <span onClick={() => {props.setBurgerState(!props.burgerState)}}></span>
+                                        </form>
+                                </Formik>
                         </div>
                 </header>
         )
