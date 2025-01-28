@@ -70,7 +70,7 @@ const Header: FC<TProps> = (props) => {
                         </div>
                         {props.popup && (
                                 <div className={styles.contactPopup}>
-                                        {!sent ? (
+                                        {sent ? (
                                                 <div className={styles.contactPopupSuccess} >
                                                         <h1>Отлично! Мы скоро вам перезвоним.</h1>
                                                         <button className='secondaryButton' onClick={()=>{props.callPopup(false)}}>Закрыть</button>
