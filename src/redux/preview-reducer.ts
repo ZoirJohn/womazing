@@ -25,8 +25,11 @@ const previewSlice = createSlice({
                                 }
                         })
                 },
+                clearCart(state, action: PayloadAction) {
+                        state.cart = []
+                },
         },
 })
 
-export const { setCartItems, deleteCartItems, changeCartItemsAmount } = previewSlice.actions
+export const { setCartItems, deleteCartItems, changeCartItemsAmount, clearCart } = previewSlice.actions
 export default previewSlice.reducer

@@ -5,6 +5,7 @@ import { getCartItems } from '../../selector'
 import { TItem } from '../../types'
 import { changeCartItemsAmount, deleteCartItems } from '../../redux/preview-reducer'
 import { Link } from 'react-router-dom'
+import { clearCart } from '../../redux/preview-reducer'
 import PageNav from '../../assets/PageNav'
 
 type TProps = {}
@@ -63,7 +64,7 @@ const Cart: FC<TProps> = (props) => {
                                                 <span>Итого:</span> ${overallPrice}
                                         </p>
                                         {cartItems[0] && (
-                                                <Link to={'/checkout'} className={`primaryButton`}>
+                                                <Link to={'/checkout'} className={`primaryButton`} onClick={() => dispatch(clearCart())}>
                                                         Оформить заказ
                                                 </Link>
                                         )}
