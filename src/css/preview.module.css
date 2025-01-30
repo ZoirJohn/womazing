@@ -139,6 +139,11 @@
 }
 @media (max-width: 410px) {
         .associatedError {
+                top: 75%;
+                text-wrap: wrap;
+        }
+}@media (max-width: 336px) {
+        .associatedError {
                 top: 65%;
                 text-wrap: wrap;
         }

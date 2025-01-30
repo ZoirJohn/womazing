@@ -41,7 +41,14 @@ const Header: FC<TProps> = (props) => {
                                 <nav className={`${styles.nav} ${props.burgerState ? styles.active : ''}`}>
                                         <ul className={styles.nav__list}>
                                                 {navItems.map((i, id) => (
-                                                        <NavLink className={({ isActive }) => (isActive ? 'activeLink' : undefined)} to={navLinks[id]} key={id}>
+                                                        <NavLink
+                                                                className={({ isActive }) => (isActive ? 'activeLink' : undefined)}
+                                                                to={navLinks[id]}
+                                                                key={id}
+                                                                onClick={() => {
+                                                                        props.setBurgerState(false)
+                                                                }}
+                                                        >
                                                                 {navItems[id]}
                                                         </NavLink>
                                                 ))}
@@ -71,9 +78,16 @@ const Header: FC<TProps> = (props) => {
                         {props.popup && (
                                 <div className={styles.contactPopup}>
                                         {sent ? (
-                                                <div className={styles.contactPopupSuccess} >
+                                                <div className={styles.contactPopupSuccess}>
                                                         <h1>Отлично! Мы скоро вам перезвоним.</h1>
-                                                        <button className='secondaryButton' onClick={()=>{props.callPopup(false)}}>Закрыть</button>
+                                                        <button
+                                                                className='secondaryButton'
+                                                                onClick={() => {
+                                                                        props.callPopup(false)
+                                                                }}
+                                                        >
+                                                                Закрыть
+                                                        </button>
                                                 </div>
                                         ) : (
                                                 <Formik
