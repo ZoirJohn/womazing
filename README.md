@@ -4,7 +4,6 @@ Welcome to Womazing, a stylish and modern website showcasing a fictional fashion
 
 🌐 Visit the live site: [https://zoirjohn.github.io/womazing/](https://zoirjohn.github.io/womazing/)
 
----
 
 ## Table of Contents
 
@@ -14,7 +13,6 @@ Welcome to Womazing, a stylish and modern website showcasing a fictional fashion
 * [Contributing](#contributing)
 * [License](#license)
 
----
 
 ## Features 🚀
 
@@ -24,7 +22,6 @@ Welcome to Womazing, a stylish and modern website showcasing a fictional fashion
 * About Us: Learn more about the brand's mission and story. 📖🌟
 * Contact Form: Easily get in touch with the team for inquiries or feedback. 📧📝
 
----
 
 ## Technologies Used 🛠️
 
@@ -33,7 +30,6 @@ Welcome to Womazing, a stylish and modern website showcasing a fictional fashion
 * HTML5 & CSS3: For structuring and styling the website. 🎨🖌️
 * GitHub Pages: For hosting the website. 🚀🌐
 
----
 
 ## Setup Instructions 🛠️
 
@@ -82,7 +78,6 @@ To run this project locally, follow these steps:
 6. Explore and modify:
    Feel free to modify the code, experiment with styles, or add new features. 🎨💡
 
----
 
 ## Contributing 🤝
 
@@ -94,13 +89,11 @@ Contributions are welcome! If you'd like to contribute, please:
 4. Push your changes to your fork 🚀
 5. Submit a pull request 🔄
 
----
 
 ## License 📄
 
 This project is open-source and available under the MIT License. Feel free to use, modify, and distribute the code as needed.
 
----
 
 ## Acknowledgments 🙏
 
